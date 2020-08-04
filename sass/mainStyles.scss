@@ -1,0 +1,58 @@
+// Paleta de colores
+
+$color1 : #2AAF74;
+$color2 : #4ED99C;
+$color3 : #D1EBFE;
+$complement : #F7BE7F;
+
+$colorText: #888;
+
+// Breakpoints
+$breakpoints : (
+				s  : 0,
+				m  : 640px,
+				l  : 1024px,
+				xl : 1440px
+);
+
+@import 'components/header.scss';
+@import "components/main";
+
+body{
+	margin: 0;
+	box-sizing: border-box;
+	min-height: 100vh;
+	background: linear-gradient(#EEEEEE 80%, #999);
+	font-family: 'Roboto', sans-serif;
+	color: $colorText;
+}
+
+.global-container{
+	display: flex;
+	max-width: 1400px;
+	margin: auto;
+
+	header{
+		flex-basis: 30%;
+		margin-right: 0;
+	}
+
+	main{
+		flex-basis: 70%;
+	}
+
+	@media all and (max-width: 640px){
+		flex-direction: column;
+		header{
+			margin: 1em;
+		}
+	}
+}
+
+header, main > *{
+	background-color: #fff;
+	margin: 1em;
+	box-shadow: 0 0 20px #888888;
+}
+
+
