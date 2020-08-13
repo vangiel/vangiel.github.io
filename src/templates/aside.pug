@@ -1,0 +1,31 @@
+- pages = ['About me', 'Research', 'Publications', 'Demos', 'Contact']
+
+header.aside-header
+  .aside-header__img-container
+    img(src="../../img/daniel.jpg", alt="Daniel")
+  .aside-header__content
+    h2.aside-header__content__name Daniel Rodriguez-Criado
+    h3.aside-header__content__major PhD in Computer Science
+    h3.aside-header__content__location 
+      | #[i.fas.fa-location-arrow] Aston University, UK
+  hr.aside-header__hr
+
+nav.aside-menu
+  ul.main-menu
+    li.main-menu__item--active: a(href= "index.html") News
+    each page in pages
+      li.main-menu__item: a(href=`${page.split(' ').join('-').toLowerCase()}.html`)= page
+    i.far.fa-newspaper
+    i.far.fa-address-card
+    i.fas.fa-search
+    i.fas.fa-pencil-alt
+    i.fas.fa-film
+    i.far.fa-paper-plane
+
+footer.aside-footer
+  a(href="https://www.linkedin.com/in/daniel-rodr%C3%ADguez-criado-6967626a/")
+    i.fab.fa-linkedin
+  a(href="https://twitter.com/danirocri")
+    i.fab.fa-twitter-square
+  a(href="https://github.com/vangiel")
+    i.fab.fa-github-square

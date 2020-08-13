@@ -1,11 +1,21 @@
-main{
-  display: flex;
-  flex-direction: column;
+.main-content{
+  background-color: white;
+  
+  .main-header{
+    height: 30vh;
 
-  .title{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
+  .main-section{
+    padding: 0 2rem;
+    height: 100%;
   }
 }
 
-//Education
+
 

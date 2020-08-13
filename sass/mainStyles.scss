@@ -1,58 +1,20 @@
-// Paleta de colores
+// Import libraries and variables.
 
-$color1 : #2AAF74;
-$color2 : #4ED99C;
-$color3 : #D1EBFE;
-$complement : #F7BE7F;
+@import "base/variables";
+@import "libraries/normalize.scss";
 
-$colorText: #888;
+// Import base styles and mixins
 
-// Breakpoints
-$breakpoints : (
-				s  : 0,
-				m  : 640px,
-				l  : 1024px,
-				xl : 1440px
-);
+@import "base/base";
+@import "base/mixins";
 
-@import 'components/header.scss';
+// Import basic components of the whole project. Themes
+
+@import "components/aside";
 @import "components/main";
+@import "components/footer";
 
-body{
-	margin: 0;
-	box-sizing: border-box;
-	min-height: 100vh;
-	background: linear-gradient(#EEEEEE 80%, #999);
-	font-family: 'Roboto', sans-serif;
-	color: $colorText;
-}
+// Import modules
 
-.global-container{
-	display: flex;
-	max-width: 1400px;
-	margin: auto;
-
-	header{
-		flex-basis: 30%;
-		margin-right: 0;
-	}
-
-	main{
-		flex-basis: 70%;
-	}
-
-	@media all and (max-width: 640px){
-		flex-direction: column;
-		header{
-			margin: 1em;
-		}
-	}
-}
-
-header, main > *{
-	background-color: #fff;
-	margin: 1em;
-	box-shadow: 0 0 20px #888888;
-}
 
 

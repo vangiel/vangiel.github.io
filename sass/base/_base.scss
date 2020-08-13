@@ -1,0 +1,45 @@
+// RWD Bases
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-family : "Roboto", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+.global-container{
+  max-width: 2000px;
+  margin: auto;
+  min-height: 100vh;
+  
+  & > *{
+    box-shadow: 0 0 15px 4px rgba(#333, .5);
+  }
+  .main-aside{
+    position: fixed;
+    top: 0;
+    width: $asideWidth;
+    height: 100vh;
+  }
+  .main-content{
+    background: #fff;
+    margin-left: $asideWidth + $mainMargin;
+    margin-right: $mainMargin;
+    min-height: 100vh;
+  }
+}
+
+
+ul{
+  list-style: none;
+}
+
+a {
+  text-decoration : none;
+}
