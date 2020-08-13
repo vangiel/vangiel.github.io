@@ -12,15 +12,19 @@ header.aside-header
 
 nav.aside-menu
   ul.main-menu
-    li.main-menu__item--active: a(href= "index.html") News
-    each page in pages
-      li.main-menu__item: a(href=`${page.split(' ').join('-').toLowerCase()}.html`)= page
-    i.far.fa-newspaper
-    i.far.fa-address-card
-    i.fas.fa-search
-    i.fas.fa-pencil-alt
-    i.fas.fa-film
-    i.far.fa-paper-plane
+    li.main-menu__item--active: a(href= "#") News
+      i.fas.fa-home
+    li.main-menu__item: a(href= "pages/about-me.html") About me
+      i.far.fa-address-card
+    li.main-menu__item: a(href= "pages/research.html") Research
+      i.fas.fa-search
+    li.main-menu__item: a(href= "pages/publications.html") Publications
+      i.fas.fa-pencil-alt
+    li.main-menu__item: a(href= "pages/demos.html") Demos
+      i.fas.fa-film
+    li.main-menu__item: a(href= "pages/contact.html") Contact
+      i.far.fa-paper-plane
+    
 
 footer.aside-footer
   a(href="https://www.linkedin.com/in/daniel-rodr%C3%ADguez-criado-6967626a/")
