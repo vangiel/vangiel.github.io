@@ -16,11 +16,8 @@ html, body{
 .global-container{
   max-width: 2000px;
   margin: auto;
-  min-height: 100vh;
+  min-height: 100%;
   
-  & > *{
-    box-shadow: 0 0 15px 4px rgba(#333, .5);
-  }
   .main-aside{
     position: fixed;
     top: 0;
@@ -33,6 +30,17 @@ html, body{
     margin-right: $mainMargin;
     min-height: 100vh;
   }
+
+  @media screen and (max-width: map-get($breakpoints, m)){
+    .main-aside{
+        left: -$asideWidth;
+    }
+
+    .main-content{
+      margin: 0;
+    }
+
+}
 }
 
 
