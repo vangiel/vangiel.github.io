@@ -32,7 +32,8 @@ label{
     z-index: 100;
 
     background-color: lighten($color: $complement, $amount: 40%);
-    padding: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
 
     display: none;
     
