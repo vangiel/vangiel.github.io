@@ -19,6 +19,7 @@
 
       h1{
         font-size: 50px;
+        text-transform: uppercase;
       }
 
       @media screen and (max-width: map-get($breakpoints, m)){
@@ -34,6 +35,9 @@
   .main-section{
     padding: 0 2rem;
     min-height: 100%;
+    @media screen and (max-width: map-get($breakpoints, m)){
+      padding: 0;
+    }
 
     .new{
       box-shadow: 0 0 15px 4px rgba(#333, .5);
@@ -50,7 +54,40 @@
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        padding-left: 1em;
+        align-content: center;
+
+        margin: 10px;
+        padding-top: 1em;
+
+        .new__date{
+          margin: 0;
+          padding: 1em;
+          flex-flow: row nowrap;
+          height: 2em;
+          width: 10em;
+          box-shadow: none;
+
+          span{
+            margin-left: 5px;
+          }
+        }
+
+        .new__content{
+          margin: auto;
+          padding: 1em;
+
+          
+          h1{
+            margin:0;
+            font-size: 1.5em;
+          }
+
+          p{
+            text-align: justify;
+            text-justify: inter-word;
+            margin: .5em;
+          }
+        }
       }
 
       &__date{

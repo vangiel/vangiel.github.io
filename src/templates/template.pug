@@ -12,7 +12,8 @@ html(lang="en")
     link(rel="stylesheet" href="css/mainStyles.css")
   body
     .global-container
-      a.fas.fa-bars#menu-icon
+      input(type = "checkbox")#menu-icon
+      label(for= "menu-icon"): i.fas.fa-bars
       aside.main-aside
         include aside
       main.main-content

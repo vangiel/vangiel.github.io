@@ -34,6 +34,9 @@ html, body{
   @media screen and (max-width: map-get($breakpoints, m)){
     .main-aside{
         left: -$asideWidth;
+        .aside-header__img-container{
+          display: none;
+        }
     }
 
     .main-content{

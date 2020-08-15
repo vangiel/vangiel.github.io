@@ -1,13 +1,41 @@
-#menu-icon{
-    color: $complement;
-    font-size: 30px;
-    cursor: pointer;
+input#menu-icon{
+    display: none;
+    &:checked ~ .main-aside{
+        left: 0;
+        width: 100vw;
+        background-color: rgba($color: $complement, $alpha: .95);
+    }
 
-    position: absolute;
+    &:checked ~ .main-content{
+        overflow: hidden;
+    }
+
+    &:checked + label{
+        background-color: transparent;
+        i.fas{
+            color: lighten($color: $complement, $amount: 40%);
+        }
+    }
+}
+
+label{
+
+    i.fas.fa-bars{
+        color: $complement;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    position: fixed;
     top: 30px;
     left: 30px;
+    z-index: 100;
+
+    background-color: lighten($color: $complement, $amount: 40%);
+    padding: 5px;
 
     display: none;
+    
 
     @media screen and (max-width: map-get($breakpoints, m)){
         display: block;
@@ -19,10 +47,13 @@
     overflow: auto;
     scrollbar-color: lighten($color: $complement, $amount: 10%) transparent;
     scrollbar-width: thin;
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+
+    transition: left .4s ease-in-out;
 }
 
 .aside-header{
