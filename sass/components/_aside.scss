@@ -39,6 +39,10 @@ label{
     justify-content: flex-start;
 
     transition: left .4s ease-in-out;
+
+    @media screen and (max-width: map-get($breakpoints, m)){
+        overflow: hidden;
+    }
 }
 
 .aside-header{
