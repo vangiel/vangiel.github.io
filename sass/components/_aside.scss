@@ -1,21 +1,5 @@
 input#menu-icon{
     display: none;
-    &:checked ~ .main-aside{
-        left: 0;
-        width: 100vw;
-        background-color: rgba($color: $complement, $alpha: .95);
-    }
-
-    &:checked ~ .main-content{
-        overflow: hidden;
-    }
-
-    &:checked + label{
-        background-color: transparent;
-        i.fas{
-            color: lighten($color: $complement, $amount: 40%);
-        }
-    }
 }
 
 label{
@@ -214,5 +198,22 @@ $iconSize : 1.8em;
             left: -1px;
         }
 
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, m)){
+    input#menu-icon{
+        &:checked ~ .main-aside{
+            left: 0;
+            width: 100vw;
+            background-color: rgba($color: $complement, $alpha: .95);
+        }
+
+        &:checked + label{
+            background-color: transparent;
+            i.fas{
+                color: lighten($color: $complement, $amount: 40%);
+            }
+        }
     }
 }

@@ -8,6 +8,8 @@
     background-size: cover;
     box-shadow: 0 0 15px 4px rgba(#333, .5);
 
+    margin: 0;
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -33,7 +35,7 @@
   }
 
   .main-section{
-    padding: 0 2rem;
+    padding: 0 1rem;
     min-height: 100%;
     @media screen and (max-width: map-get($breakpoints, m)){
       padding: 0;
