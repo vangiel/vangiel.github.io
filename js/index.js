@@ -1,8 +1,8 @@
 /* Logic of the menu icon */
 
-let inputCheckbox = document.querySelector("#menu-icon")
-let bodyElement = document.querySelector("body")
-let x = window.matchMedia("(max-width: 740px)")
+const inputCheckbox = document.querySelector("#menu-icon")
+const bodyElement = document.querySelector("body")
+const x = window.matchMedia("(max-width: 740px)")
 
 function mediaQuery(x){
     if(x.matches && inputCheckbox.checked == true){
@@ -21,3 +21,42 @@ inputCheckbox.addEventListener('change', (event) => {
         bodyElement.style.overflowY = "auto"
     }
 })
+
+/* Set classes and links of the menu*/
+
+let path = window.location.pathname
+const profileImage = document.querySelector("#profile-image")
+const pageName = path.split("/").pop()
+const mainMenu = document.querySelector("#main-menu")
+
+for (let i=1; i < mainMenu.childNodes.length; i=i+2) {
+    let listItem = mainMenu.childNodes[i]
+    let listClass = listItem.getAttribute("class")
+    let listLink = listItem.childNodes[0].getAttribute("href")
+    // It is the index page
+    if(pageName === "index.html" || pageName === ""){
+        if (i == 1) {
+            continue
+        } else{
+            listItem.childNodes[0].setAttribute("href", "pages/" + listLink)
+        }    
+    } else {
+        profileImage.setAttribute("src", "../" + profileImage.getAttribute("src"))
+        if(listLink === pageName){
+            listItem.setAttribute("class", listClass + "--active")
+        } else if(i==1){
+            listItem.childNodes[0].setAttribute("href", "../" + listLink)
+            listItem.setAttribute("class", "main-menu__item")
+        }
+    }
+
+    // if (listItem.getAttribute("class").split("--").length > 1){
+    //     continue
+    // }
+    // if (listItem.childNodes[0].getAttribute("href") === pageName){
+    //     listItem
+    // }
+}
+
+//console.log(mainMenu.childNodes[1].childNodes[0].getAttribute("href"))
+//console.log(mainMenu.childNodes)

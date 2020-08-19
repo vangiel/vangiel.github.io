@@ -113,6 +113,11 @@ $iconSize : 1.8em;
     margin-top: 2rem;
     flex-grow: 1;
     .main-menu{
+        @media screen and (max-width: map-get($breakpoints, m)){
+            max-width: 400px;
+            margin: auto;
+        }
+
         margin: 0;
         padding: 0;
 

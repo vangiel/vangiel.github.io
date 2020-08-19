@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="img/favicon/rocket-solid.png">
     <script src="https://kit.fontawesome.com/55d924b99d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/mainStyles.css">
+    <link rel="stylesheet" href="../css/mainStyles.css">
   </head>
   <body>
     <div class="global-container">
@@ -16,7 +16,7 @@
       <label for="menu-icon"><i class="fas fa-bars"></i></label>
       <aside class="main-aside">
         <header class="aside-header">
-          <div class="aside-header__img-container"><img src="img/daniel.jpg" alt="Daniel"></div>
+          <div class="aside-header__img-container"><img src="img/daniel.jpg" alt="Daniel" id="profile-image"></div>
           <div class="aside-header__content">
             <h2 class="aside-header__content__name">Daniel Rodriguez-Criado</h2>
             <h3 class="aside-header__content__major">PhD in Computer Science</h3>
@@ -26,13 +26,13 @@
           <hr class="aside-header__hr">
         </header>
         <nav class="aside-menu">
-          <ul class="main-menu">
-            <li class="main-menu__item--active"><a href="#">News<i class="fas fa-home"></i></a></li>
-            <li class="main-menu__item"><a href="pages/about-me.html">About me<i class="far fa-address-card"></i></a></li>
-            <li class="main-menu__item"><a href="pages/research.html">Research<i class="fas fa-search"></i></a></li>
-            <li class="main-menu__item"><a href="pages/publications.html">Publications<i class="fas fa-pencil-alt"></i></a></li>
-            <li class="main-menu__item"><a href="pages/demos.html">Demos<i class="fas fa-film"></i></a></li>
-            <li class="main-menu__item"><a href="pages/contact.html">Contact<i class="far fa-paper-plane"></i></a></li>
+          <ul class="main-menu" id="main-menu">
+            <li class="main-menu__item--active"><a href="index.html">News<i class="fas fa-home"></i></a></li>
+            <li class="main-menu__item"><a href="about-me.html">About me<i class="far fa-address-card"></i></a></li>
+            <li class="main-menu__item"><a href="research.html">Research<i class="fas fa-search"></i></a></li>
+            <li class="main-menu__item"><a href="publications.html">Publications<i class="fas fa-pencil-alt"></i></a></li>
+            <li class="main-menu__item"><a href="demos.html">Demos<i class="fas fa-film"></i></a></li>
+            <li class="main-menu__item"><a href="contact.html">Contact<i class="far fa-paper-plane"></i></a></li>
           </ul>
         </nav>
         <footer class="aside-footer"><a href="https://www.linkedin.com/in/daniel-rodr%C3%ADguez-criado-6967626a/"><i class="fab fa-linkedin"></i></a><a href="https://twitter.com/danirocri"><i class="fab fa-twitter-square"></i></a><a href="https://github.com/vangiel"><i class="fab fa-github-square"></i></a></footer>
@@ -46,4 +46,5 @@
       </main>
     </div>
   </body>
+  <script src="../js/index.js"></script>
 </html>

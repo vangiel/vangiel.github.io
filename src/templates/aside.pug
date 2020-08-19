@@ -1,7 +1,7 @@
 
 header.aside-header
   .aside-header__img-container
-    img(src="img/daniel.jpg", alt="Daniel")
+    img(src="img/daniel.jpg", alt="Daniel")#profile-image
   .aside-header__content
     h2.aside-header__content__name Daniel Rodriguez-Criado
     h3.aside-header__content__major PhD in Computer Science
@@ -10,18 +10,18 @@ header.aside-header
   hr.aside-header__hr
 
 nav.aside-menu
-  ul.main-menu
-    li.main-menu__item--active: a(href= "#") News
+  ul.main-menu#main-menu
+    li.main-menu__item--active: a(href= "index.html") News
       i.fas.fa-home
-    li.main-menu__item: a(href= "pages/about-me.html") About me
+    li.main-menu__item: a(href= "about-me.html") About me
       i.far.fa-address-card
-    li.main-menu__item: a(href= "pages/research.html") Research
+    li.main-menu__item: a(href= "research.html") Research
       i.fas.fa-search
-    li.main-menu__item: a(href= "pages/publications.html") Publications
+    li.main-menu__item: a(href= "publications.html") Publications
       i.fas.fa-pencil-alt
-    li.main-menu__item: a(href= "pages/demos.html") Demos
+    li.main-menu__item: a(href= "demos.html") Demos
       i.fas.fa-film
-    li.main-menu__item: a(href= "pages/contact.html") Contact
+    li.main-menu__item: a(href= "contact.html") Contact
       i.far.fa-paper-plane
     
 
