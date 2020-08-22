@@ -11,12 +11,14 @@ html, body{
   font-family : "Roboto", sans-serif;
   font-weight: 400;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .global-container{
   max-width: 2000px;
   margin: auto;
   min-height: 100%;
+  box-shadow: 0 -20px 15px 4px rgba(#333, .5);
   
   .main-aside{
     position: fixed;
@@ -29,16 +31,19 @@ html, body{
     margin-left: $asideWidth + $mainMargin;
     margin-right: $mainMargin;
     min-height: 100vh;
+    transition: .4s margin ease-in-out;
   }
 
   @media screen and (max-width: map-get($breakpoints, m)){
+    .aside-header__img-container{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, ml)){
     .main-aside{
         left: -$asideWidth;
-        .aside-header__img-container{
-          display: none;
-        }
     }
-
     .main-content{
       margin: 0;
     }

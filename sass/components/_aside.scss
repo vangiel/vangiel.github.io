@@ -22,7 +22,7 @@ label{
     display: none;
     
 
-    @media screen and (max-width: map-get($breakpoints, m)){
+    @media screen and (max-width: map-get($breakpoints, ml)){
         display: block;
     }
 }
@@ -216,6 +216,28 @@ $iconSize : 1.8em;
             left: 0;
             width: 100vw;
             background-color: rgba($color: $complement, $alpha: .95);
+        }
+
+        &:checked + label{
+            background-color: transparent;
+            i.fas{
+                color: lighten($color: $complement, $amount: 40%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, ml)){
+    input#menu-icon{
+        &:checked ~ .main-aside{
+            left: 0;
+        }
+
+        &:checked ~ .main-content{
+            margin-left: $asideWidth + $mainMargin;
+            .new{
+                margin: 1em 0;
+            }
         }
 
         &:checked + label{

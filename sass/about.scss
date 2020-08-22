@@ -1,3 +1,5 @@
+@import "./mainStyles";
+
 .main-content{
   background-color: white;
   
@@ -9,10 +11,22 @@
     box-shadow: 0 0 15px 4px rgba(#333, .5);
 
     margin: 0;
+    position: relative;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+
+      background-color: rgba($color1, .2);
+    }
 
     &__copy{
       color: $complement;

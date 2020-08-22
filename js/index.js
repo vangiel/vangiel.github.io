@@ -49,14 +49,5 @@ for (let i=1; i < mainMenu.childNodes.length; i=i+2) {
             listItem.setAttribute("class", "main-menu__item")
         }
     }
-
-    // if (listItem.getAttribute("class").split("--").length > 1){
-    //     continue
-    // }
-    // if (listItem.childNodes[0].getAttribute("href") === pageName){
-    //     listItem
-    // }
 }
 
-//console.log(mainMenu.childNodes[1].childNodes[0].getAttribute("href"))
-//console.log(mainMenu.childNodes)
