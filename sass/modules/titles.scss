@@ -1,15 +1,16 @@
 #title{
     animation: fill 0.5s ease forwards 2.9s;
-    transform: scale(.8);
+    transform: scale(.8, .8);
     transform-origin: 0px 40px;
 
     @media screen and (max-width: map-get($breakpoints, ml)){
-        transform: scale(.5);
-        transform-origin: 0 90px;
+        transform: scale(.5, .5);
+        
+        //transform-origin: 0 90px;
     }
 
     @media screen and (max-width: map-get($breakpoints, m)){
-        transform-origin: 140px 90px;
+        transform-origin: calc(403px/2) calc(127px/2);
     }
 }
 

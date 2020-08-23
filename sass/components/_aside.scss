@@ -219,6 +219,7 @@ $iconSize : 1.8em;
         }
 
         &:checked + label{
+            left: 1em;
             background-color: transparent;
             i.fas{
                 color: lighten($color: $complement, $amount: 40%);
