@@ -22,7 +22,7 @@ label{
     display: none;
     
 
-    @media screen and (max-width: map-get($breakpoints, ml)){
+    @media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)){
         display: block;
     }
 }
@@ -39,16 +39,11 @@ label{
     justify-content: flex-start;
 
     transition: left .4s ease-in-out;
-
-    @media screen and (max-width: map-get($breakpoints, m)){
-        overflow: hidden;
-    }
 }
 
 .aside-header{
     margin-top: 2rem;
     width: 100%;
-
     &__img-container{
 
         overflow: hidden;
@@ -210,24 +205,7 @@ $iconSize : 1.8em;
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, m)){
-    input#menu-icon{
-        &:checked ~ .main-aside{
-            left: 0;
-            width: 100vw;
-            background-color: rgba($color: $complement, $alpha: .95);
-        }
-
-        &:checked + label{
-            background-color: transparent;
-            i.fas{
-                color: lighten($color: $complement, $amount: 40%);
-            }
-        }
-    }
-}
-
-@media screen and (max-width: map-get($breakpoints, ml)){
+@media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)) {
     input#menu-icon{
         &:checked ~ .main-aside{
             left: 0;
@@ -248,3 +226,25 @@ $iconSize : 1.8em;
         }
     }
 }
+
+@media screen and (max-width: map-get($breakpoints, m)){
+    input#menu-icon{
+        &:checked ~ .main-aside{
+            left: 0;
+            width: 100vw;
+            background-color: rgba($color: $complement, $alpha: .95);
+        }
+
+        &:checked ~ .main-content{
+            margin: 0;
+        }
+
+        &:checked + label{
+            background-color: transparent;
+            i.fas{
+                color: lighten($color: $complement, $amount: 40%);
+            }
+        }
+    }
+}
+
