@@ -25,7 +25,6 @@ inputCheckbox.addEventListener('change', (event) => {
 /* Set classes and links of the menu*/
 
 let path = window.location.pathname
-const profileImage = document.querySelector("#profile-image")
 const pageName = path.split("/").pop()
 const mainMenu = document.querySelector("#main-menu")
 
@@ -41,7 +40,6 @@ for (let i=1; i < mainMenu.childNodes.length; i=i+2) {
             listItem.childNodes[0].setAttribute("href", "pages/" + listLink)
         }    
     } else {
-        profileImage.setAttribute("src", "../" + profileImage.getAttribute("src"))
         if(listLink === pageName){
             listItem.setAttribute("class", listClass + "--active")
         } else if(i==1){
@@ -50,4 +48,3 @@ for (let i=1; i < mainMenu.childNodes.length; i=i+2) {
         }
     }
 }
-

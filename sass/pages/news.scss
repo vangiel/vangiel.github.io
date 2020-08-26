@@ -5,12 +5,38 @@
 .main-content{
   background-color: white;
   
+  
   .main-header{
-    height: 30vh;
-    min-height: 20em;
-    background-image: url(../img/index/cover.jpg);
+    height: clamp(20em, 30vh, 40em);
+    width: 100%;
+    background: linear-gradient(to right, rgba($color1, 0.3), transparent), 
+                url(../img/index/cover.jpg);
+    //background-attachment: fixed;
     background-size: cover;
     box-shadow: 0 0 15px 4px rgba(#333, .5);
+
+    margin: 0;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__copy{
+      color: $complement;
+      width: 40%;
+      margin-right: 3em;
+
+      h1{
+        font-size: 50px;
+        text-transform: uppercase;
+      }
+
+      p{
+        color: $complement;
+        font-weight: bold;
+      }
+    }
 
     @media screen and (orientation: landscape) and (max-width: map-get($breakpoints, ml)), (max-height: 20em){
       min-height: auto;
@@ -33,45 +59,10 @@
     }
 
 
-    margin: 0;
-    position: relative;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    &::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-
-      background-color: rgba($color1, .2);
-    }
-
-    &__copy{
-      color: $complement;
-      width: 40%;
-      margin-right: 3em;
-
-      h1{
-        font-size: 50px;
-        text-transform: uppercase;
-      }
-
+    @media screen and (max-width: map-get($breakpoints, m)){
+      margin: auto;
       p{
-        color: $complement;
-        font-weight: bold;
-      }
-
-      @media screen and (max-width: map-get($breakpoints, m)){
-        width: 70%;
-        margin: auto;
-        p{
-          display: none;
-        }
+        display: none;
       }
     }
   }
@@ -79,10 +70,10 @@
   /* Section styles */
 
   .main-section{
-    padding: 0 1rem;
+    padding: .5rem 1rem;
     min-height: 100%;
     @media screen and (max-width: map-get($breakpoints, m)){
-      padding: 0;
+      padding:0;
     }
 
     .new{

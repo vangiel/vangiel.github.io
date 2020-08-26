@@ -3,5 +3,13 @@ block styles
     link(rel="stylesheet" href="../css/publications.css")
 
 block header
+    header.main-header
+        .main-header__copy
+            include ../titlesSVG/publicationsTitle
+            p Here I will post the news that I consider the most relevant in my field. That is Robotics and Artificial intelligence. Stay posted!
 
 block section
+    #publications.publications-container
+
+append scripts
+    script(src="../js/publications.js")

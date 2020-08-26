@@ -1,0 +1,53 @@
+[
+
+{
+	"year": "2020",
+	"title": "Multi-camera Torso Pose Estimation using Graph Neural Networks",
+	"author": [ "Daniel Rodriguez-Criado", "Pilar Bachiller", "Pablo Bustos", "George Vogiatzis" ,"Luis J. Manso"],
+	"in": "arXiv 2007.14126. 2020",
+	"type": "cpaper",
+	"download": "https://arxiv.org/pdf/2007.14126.pdf",
+	"url": "https://arxiv.org/abs/2007.14126",
+	"abstract": "Estimating the location and orientation of humans is an essential skill for service and assistive robots. To achieve a reliable estimation in a wide area such as an apartment, multiple RGBD cameras are frequently used. Firstly, these setups are relatively expensive. Secondly, they seldom perform an effective data fusion using the multiple camera sources at an early stage of the processing pipeline. Occlusions and partial views make this second point very relevant in these scenarios. The proposal presented in this paper makes use of graph neural networks to merge the information acquired from multiple camera sources, achieving a mean absolute error below 125 mm for the location and 10 degrees for the orientation using low-resolution RGB images. The experiments, conducted in an apartment with three cameras, benchmarked two different graph neural network implementations and a third architecture based on fully connected layers. The software used has been released as open-source in a public repository.",
+	"key": "rodriguezcriado2020multicamera",
+	"pages": "6"
+},
+
+{
+	"year": "2020",
+	"title": "A Toolkit to Generate Social NavigationDatasets",
+	"author": [ "Rishabh Baghel", "Aditya Kapoor", "Pilar Bachiller", "Ronit R. Jorvekar", "Daniel Rodriguez-Criado", "Luis J. Manso"],
+	"in": "Under review. 2020.",
+	"type": "cpaper",
+	"abstract": "Social navigation datasets are necessary to assess social navigation algorithms and train those making use of machine learning. Most of the available datasets target pedestrians whose movement is taken as the pattern to replicate by the robots. It can be argued that one of the main reasons for this to happen is that compiling datasets where real robots are manually controlled as they would be expected to behave when moving is a very resource-intensive task. Another aspect which is often missing in the datasets is symbolic information that could be relevant, such as human activities or relationships. Unfortunately, the available datasets targeting robots and supporting symbolic information are restricted to static scenes. This paper argues that simulation can be used to gather social navigation data in an effective and cost-efficient way and presents a toolkit for this purpose. A use case studying the application of graph neural networks to create learned control policies using supervised learning is presented as an example of how the toolkit can be used.",
+	"key": "rishabh2020toolkit",
+	"pages": "14"
+},
+
+{
+	"year": "2019",
+	"title": "Dise&ntilde;o e implementaci&oacute;n de la arquitectura de un procesador para la detecci&oacute;n del deslizamiento de objetos sobre una matriz de sensores t&aacute;ctiles controlado por una FPGA",
+	"author": ["Daniel Rodriguez-Criado"],
+	"in": "Master in Industrial Engineerings. University of M&aacute;laga.",
+	"school" : "School of Industrial Engineering, University of M&aacute;laga",
+	"type": "masterthesis",
+	"download": "../theses/thesisIndustriales.pdf",
+	"abstract": "Este trabajo describe el desarrollo del dise&ntilde;o y la implementaci&oacute;n de un algoritmo capaz de detectar el deslizamiento con los datos recogidos por una matriz de sensores táctiles. El principal objetivo es el de identificar las etapas tempranas de este deslizamiento para que una vez instalado en un mano rob&oacute;tica funcional, se pueda reaccionar con antelaci&oacute;n a la ca&iacute;da del objeto sujetado. Todo esto usando MATLAB para el dise&ntilde;o del algoritmo y el an&aacute;lisis de los datos; el sistema de FPGA y matriz de sensores táctiles para implementar la l&oacute;gica; y una aplicaci&oacute;n en LabVIEW para la representaci&oacute;n en tiempo real de los datos arrojados por la FPGA.",
+	"key": "rodriguez2019tactilFPGA"
+},
+
+{
+	"year": "2019",
+	"title": "Differential Robot for Table Surfaces Disinfection using Hi-NW Technology",
+	"author": ["Daniel Rodriguez-Criado"],
+	"in": "Master in Electronic Systmes for Smart Environments. University of M&aacute;laga in collaboration with Hong Kong University of Science and Technology.",
+	"school" : "School of Industrial Engineering, University of M&aacute;laga.",
+	"type": "masterthesis",
+	"download": "../theses/thesisHK.pdf",
+	"abstract": "Recently, there has been significant concern regarding the widesprea prolifera ion of biological hazards and thus, it is necessary to adapt novel solutions to this matter. This project has developed a differential robot for simultaneously performing automatic cleaning and disinfection on table surfaces. This system has a body with two motion wheels and a castor wheel what allows it to move in any direction. Also included are IR sensors to detect the edges of the table, and an obstacle detecting sensor facing forward for detecting an object located ahead of its travelling direction. The microcontroller system located within the robot controls all of its movements, which allows for a safe path to be navigated on the table surface when combined with the mentioned sensors. The disinfection system is made up of three LEDs (two blue light sources and one UV emitter) that eliminate pathogens or mi crobes from the irradiated surface. Finally, the robot includes a broom at the rear in order to sweep the dust and waste from the table.",
+	"key": "rodriguez2019difrobot"
+}
+
+
+]
+
