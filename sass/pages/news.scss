@@ -1,76 +1,13 @@
-@import "../mainStyles";
+$imgCoverPath: "../img/index/cover.jpg";
 
-/* Header styles */
+@import "../mainStyles";
+@import "../components/header";
+
+/* Section styles */
 
 .main-content{
-  background-color: white;
-  
-  
-  .main-header{
-    height: clamp(20em, 30vh, 40em);
-    width: 100%;
-    background: linear-gradient(to right, rgba($color1, 0.3), transparent), 
-                url(../img/index/cover.jpg);
-    //background-attachment: fixed;
-    background-size: cover;
-    box-shadow: 0 0 15px 4px rgba(#333, .5);
-
-    margin: 0;
-    position: relative;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    &__copy{
-      color: $complement;
-      width: 40%;
-      margin-right: 3em;
-
-      h1{
-        font-size: 50px;
-        text-transform: uppercase;
-      }
-
-      p{
-        color: $complement;
-        font-weight: bold;
-      }
-    }
-
-    @media screen and (orientation: landscape) and (max-width: map-get($breakpoints, ml)), (max-height: 20em){
-      min-height: auto;
-      height: 100vh;
-
-      &::after{
-        content: "";
-        height: 5em;
-        width: 5em;
-
-        position: absolute;
-        bottom: 0;
-        left: 40%;
-        transform: translateY(-40%);
-
-        background-color: white;
-        clip-path: polygon(0 43%, 50% 78%, 100% 44%, 100% 64%, 49% 100%, 0 65%);
-
-      }
-    }
-
-
-    @media screen and (max-width: map-get($breakpoints, m)){
-      margin: auto;
-      p{
-        display: none;
-      }
-    }
-  }
-
-  /* Section styles */
-
+  background-color: lighten($complement, 76%) !important;
   .main-section{
-    padding: .5rem 1rem;
     min-height: 100%;
     @media screen and (max-width: map-get($breakpoints, m)){
       padding:0;
@@ -86,46 +23,6 @@
 
       display: flex;
       align-items: center;
-
-      @media screen and (max-width: map-get($breakpoints, m)){
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        align-content: center;
-
-        margin: 10px;
-        padding-top: 1em;
-
-        .new__date{
-          margin: 0;
-          padding: 1em;
-          flex-flow: row nowrap;
-          height: 2em;
-          width: 10em;
-          box-shadow: none;
-
-          span{
-            margin-left: 5px;
-          }
-        }
-
-        .new__content{
-          margin: auto;
-          padding: 1em;
-
-          
-          h1{
-            margin:0;
-            font-size: 1.5em;
-          }
-
-          p{
-            text-align: justify;
-            text-justify: inter-word;
-            margin: .5em;
-          }
-        }
-      }
 
       &__date{
         align-self: flex-start;
@@ -167,6 +64,46 @@
         }
         iframe{
           margin: auto;
+        }
+      }
+
+      @media screen and (max-width: map-get($breakpoints, m)){
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+
+        margin: 10px;
+        padding-top: 1em;
+
+        &__date{
+          margin: 0;
+          padding: 1em;
+          flex-flow: row nowrap;
+          height: 2em;
+          width: 10em;
+          box-shadow: none;
+
+          span{
+            margin-left: 5px;
+          }
+        }
+
+        &__content{
+          margin: auto;
+          padding: 1em;
+
+          
+          h1{
+            margin:0;
+            font-size: 1.5em;
+          }
+
+          p{
+            text-align: justify;
+            text-justify: inter-word;
+            margin: .5em;
+          }
         }
       }
     }

@@ -19,9 +19,8 @@
       width: 40%;
       margin-right: 3em;
 
-      h1{
-        font-size: 50px;
-        text-transform: uppercase;
+      svg{
+        width: 100%;
       }
 
       p{
@@ -30,7 +29,7 @@
       }
     }
 
-    @media screen and (orientation: landscape) and (max-width: map-get($breakpoints, ml)), (max-height: 20em){
+    @media screen and (orientation: landscape) and (max-width: map-get($breakpoints, ml)) and (max-height:20em){
       min-height: auto;
       height: 100vh;
 
@@ -41,11 +40,21 @@
 
         position: absolute;
         bottom: 0;
-        left: 40%;
-        transform: translateY(-40%);
+        left: 50%;
+        transform: translateY(-50%);
 
         background-color: white;
         clip-path: polygon(0 43%, 50% 78%, 100% 44%, 100% 64%, 49% 100%, 0 65%);
+      }
+    }
+
+    @media screen and (max-width: map-get($breakpoints, m)){
+      justify-content: center;
+      &__copy{
+        margin: 0;
+        p{
+          display: none;
+        }
       }
     }
 }

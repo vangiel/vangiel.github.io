@@ -1,31 +1,4 @@
-input#menu-icon{
-    display: none;
-}
-
-label{
-
-    i.fas.fa-bars{
-        color: $complement;
-        font-size: 30px;
-        cursor: pointer;
-    }
-
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    z-index: 100;
-
-    background-color: lighten($color: $complement, $amount: 40%);
-    padding: 5px 10px;
-    border-radius: 3px;
-
-    display: none;
-    
-
-    @media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)){
-        display: block;
-    }
-}
+@import "../modules/menubutton";
 
 .main-aside{
     background: $complement;
@@ -205,47 +178,5 @@ $iconSize : 1.8em;
     }
 }
 
-@media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)) {
-    input#menu-icon{
-        &:checked ~ .main-aside{
-            left: 0;
-        }
 
-        &:checked ~ .main-content{
-            margin-left: $asideWidth + $mainMargin;
-            .new{
-                margin: 1em 0;
-            }
-        }
-
-        &:checked + label{
-            left: 1em;
-            background-color: transparent;
-            i.fas{
-                color: lighten($color: $complement, $amount: 40%);
-            }
-        }
-    }
-}
-
-@media screen and (max-width: map-get($breakpoints, m)){
-    input#menu-icon{
-        &:checked ~ .main-aside{
-            left: 0;
-            width: 100vw;
-            background-color: rgba($color: $complement, $alpha: .95);
-        }
-
-        &:checked ~ .main-content{
-            margin: 0;
-        }
-
-        &:checked + label{
-            background-color: transparent;
-            i.fas{
-                color: lighten($color: $complement, $amount: 40%);
-            }
-        }
-    }
-}
 
