@@ -1,7 +1,7 @@
 .main-header{
     height: clamp(20em, 30vh, 40em);
     width: 100%;
-    background: linear-gradient(to right, rgba($color1, 0.3), transparent), 
+    background: linear-gradient(to left, rgba($complement, 0.90), transparent), 
                 url($imgCoverPath);
     //background-attachment: fixed;
     background-size: cover;
@@ -24,7 +24,8 @@
       }
 
       p{
-        color: $complement;
+        color: white;
+        font-size: 1.1em;
         font-weight: bold;
       }
     }
