@@ -1,5 +1,5 @@
 .main-header{
-    height: clamp(20em, 30vh, 40em);
+    height: clamp(20em, 40vh, 30em);
     width: 100%;
     background: linear-gradient(to left, rgba($complement, 0.90), transparent), 
                 url($imgCoverPath);
@@ -16,11 +16,15 @@
 
     &__copy{
       color: $complement;
-      width: 40%;
-      margin-right: 3em;
+      width: min(40%, 30em);
+      margin-right: 5em;
+      display: flex;
+      flex-direction: column;
 
       svg{
-        width: 100%;
+        align-self: flex-start;
+        height: 5em;
+        width: 50%;
       }
 
       p{
@@ -53,6 +57,9 @@
       justify-content: center;
       &__copy{
         margin: 0;
+        svg{
+          width: 100%;
+        }
         p{
           display: none;
         }
