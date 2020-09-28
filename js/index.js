@@ -4,21 +4,11 @@ const inputCheckbox = document.querySelector("#menu-icon")
 const bodyElement = document.querySelector("body")
 const x = window.matchMedia("(max-width: 740px)")
 
-function mediaQuery(x){
-    if(x.matches && inputCheckbox.checked == true){
-        bodyElement.style.overflowY = "hidden"
-    } else{
-        inputCheckbox.checked = false
-    }
-}
-
-mediaQuery(x)
-x.addListener(mediaQuery)
 inputCheckbox.addEventListener('change', (event) => {
     if (event.target.checked){
-        bodyElement.style.overflowY = "hidden"
+        bodyElement.style.overflow = "hidden"
     } else {
-        bodyElement.style.overflowY = "auto"
+        bodyElement.style.overflow = "auto"
     }
 })
 
