@@ -123,7 +123,7 @@ function printHTML(data) {
       ) {
         continue;
       } else {
-        bibTex += `<span>${key}="${data[i][key]}"</span>,
+        bibTex += `<span>${key} = "${data[i][key]}"</span>,
                                <br>`;
       }
     }
@@ -135,10 +135,11 @@ function printHTML(data) {
                                  <p class="pubmain__cite"> ${cite} </p>
                                  <div class="pubmain__assets"> ${assets} </div>`;
 
-    pubDetails.innerHTML = `<h3> BibTeX </h3>
+    pubDetails.innerHTML = `<div class="wrapper"> <h3> BibTeX </h3>
                                     <p class="pubdetails__bibtex"> ${bibTex} </p>
                                     <h3> Abstract </h3>
-                                    <p class="pubdetails__abstract">${data[i].abstract}</p>`;
+                                    <p class="pubdetails__abstract">${data[i].abstract}</p>
+                            </div>`;
 
     /* Incude HTML elements into the DOM */
     publication.appendChild(pubMain);
@@ -148,20 +149,23 @@ function printHTML(data) {
 }
 
 /* Collapse button function */
+
 function collapseBtn() {
   let publications = document.querySelectorAll(".publication");
 
   publications.forEach((pub) => {
     let btn = pub.querySelector(".pubcollapse");
-    pub.childNodes[1].style.display = "none";
 
     btn.addEventListener("click", function () {
-      if (pub.childNodes[1].style.display === "none") {
-        pub.childNodes[1].style.display = "block";
-        this.innerHTML = '<i class="fas fa-angle-double-up"></i>'
-      } else {
-        pub.childNodes[1].style.display = "none";
+      var panel = pub.childNodes[1]
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
         this.innerHTML = '<i class="fas fa-angle-double-down"></i>'
+
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        this.innerHTML = '<i class="fas fa-angle-double-up"></i>'
+
       }
     });
   });

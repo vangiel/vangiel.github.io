@@ -1,5 +1,5 @@
 .main-header{
-    height: clamp(20em, 40vh, 30em);
+    height: clamp(15em, 30vh, 30em);
     width: 100%;
     background: linear-gradient(to left, rgba($complement, 0.90), transparent), 
                 url($imgCoverPath);
@@ -17,14 +17,18 @@
     &__copy{
       color: $complement;
       width: min(40%, 30em);
-      margin-right: 5em;
+      margin-right: 2em;
       display: flex;
       flex-direction: column;
 
-      svg{
-        align-self: flex-start;
-        height: 5em;
-        width: 50%;
+      h1{
+        text-transform: uppercase;
+        font-family: 'Anton', sans-serif;
+        letter-spacing: 3px;
+        margin: 5px 0;
+        color: $color1;
+        font-size: 3em;
+        font-weight: bold;
       }
 
       p{
@@ -56,9 +60,10 @@
     @media screen and (max-width: map-get($breakpoints, m)){
       justify-content: center;
       &__copy{
+        width: 100%;
         margin: 0;
-        svg{
-          width: 100%;
+        h1{
+          text-align: center;
         }
         p{
           display: none;
