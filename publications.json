@@ -34,7 +34,7 @@
 	"in": "Master in Industrial Engineerings. University of M&aacute;laga.",
 	"school" : "School of Industrial Engineering, University of M&aacute;laga",
 	"type": "masterthesis",
-	"download": "../theses/thesisIndustriales.pdf",
+	"download": "../documents/theses/thesisIndustriales.pdf",
 	"abstract": "Este trabajo describe el desarrollo del dise&ntilde;o y la implementaci&oacute;n de un algoritmo capaz de detectar el deslizamiento con los datos recogidos por una matriz de sensores táctiles. El principal objetivo es el de identificar las etapas tempranas de este deslizamiento para que una vez instalado en un mano rob&oacute;tica funcional, se pueda reaccionar con antelaci&oacute;n a la ca&iacute;da del objeto sujetado. Todo esto usando MATLAB para el dise&ntilde;o del algoritmo y el an&aacute;lisis de los datos; el sistema de FPGA y matriz de sensores táctiles para implementar la l&oacute;gica; y una aplicaci&oacute;n en LabVIEW para la representaci&oacute;n en tiempo real de los datos arrojados por la FPGA.",
 	"key": "rodriguez2019tactilFPGA"
 },
@@ -46,7 +46,7 @@
 	"in": "Master in Electronic Systmes for Smart Environments. University of M&aacute;laga in collaboration with Hong Kong University of Science and Technology.",
 	"school" : "School of Industrial Engineering, University of M&aacute;laga.",
 	"type": "masterthesis",
-	"download": "../theses/thesisHK.pdf",
+	"download": "../documents/theses/thesisHK.pdf",
 	"abstract": "Recently, there has been significant concern regarding the widesprea prolifera ion of biological hazards and thus, it is necessary to adapt novel solutions to this matter. This project has developed a differential robot for simultaneously performing automatic cleaning and disinfection on table surfaces. This system has a body with two motion wheels and a castor wheel what allows it to move in any direction. Also included are IR sensors to detect the edges of the table, and an obstacle detecting sensor facing forward for detecting an object located ahead of its travelling direction. The microcontroller system located within the robot controls all of its movements, which allows for a safe path to be navigated on the table surface when combined with the mentioned sensors. The disinfection system is made up of three LEDs (two blue light sources and one UV emitter) that eliminate pathogens or mi crobes from the irradiated surface. Finally, the robot includes a broom at the rear in order to sweep the dust and waste from the table.",
 	"key": "rodriguez2019difrobot"
 }
