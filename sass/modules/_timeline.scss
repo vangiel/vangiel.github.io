@@ -1,8 +1,9 @@
 /* Global timeline container */
 .timeline{
     margin: 2em 0;
-    padding: 0 2em;
+    padding: 0 .5em;
     position: relative;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -11,12 +12,12 @@
     &::after{
         content: "";
         position: absolute;
-        top: 0;
+        top: 5px;
         right: 50%;
         transform: translateX(50%);
 
         width: 5px;
-        height: 100%;
+        height: 99%;
         background-color: rgba($color: $color1, $alpha: .4);
     }
 }
@@ -24,6 +25,7 @@
 /* Individual element of the timeline */
 .timeline__element{
     width: 45%;
+    align-self: start;
     margin-bottom: 3rem;
     position: relative;
 
@@ -32,6 +34,27 @@
     box-shadow: 0 0 4px 2px rgba($color: #333, $alpha: .2),
                 4px 0 0 0 $color1 inset;
     background-color: white;
+
+    /* Dot in the line */
+    &::after{
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: -15%;
+        z-index: 1;
+        
+        align-self: center;
+        height: 1.3rem;
+        width: 1.3rem;
+        border-radius: 50%;
+        background-color: $color1;
+        box-shadow: 0 0 0 3px darken($color1, 12%);
+    
+    }
+
+    .title{
+        color: darken($color1, 12%);
+    }
 
     .university{
         margin-bottom: 1.5em;
@@ -47,21 +70,6 @@
         color: white;
 
         background-color: $color1;
-
-        /* Dot in the line */
-        &::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -50%;
-            z-index: 1;
-
-            height: 1.3rem;
-            width: 1.3rem;
-            border-radius: 50%;
-            background-color: $color1;
-
-        }
     }
 
     .copy{
@@ -73,16 +81,40 @@
 /* Even elements to the right */
 .timeline__element:nth-child(even){
     align-self: end;
-
     .date{
+        right: auto;
         left: -19rem;
+    }
+    &::after{
+        right: auto;
+        left: -15%;
     }
 }
 
 /* Remove margin from the last element */
 .timeline__element:last-child{
     margin-bottom: 0;
-
 }
 
 /* Responsive sizes */
+
+@media screen and (max-width: 1200px){
+    *::after{
+        content: normal;
+    }
+    .timeline{
+        display: block;
+    }
+    .timeline__element{
+        width: 100%;
+        z-index: 100;
+        &::after{
+            content: normal;
+        }
+        .date{
+            position: static;
+            margin-top: 10px;
+        }
+    }
+
+}
