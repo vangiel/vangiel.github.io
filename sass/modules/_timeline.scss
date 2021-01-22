@@ -35,15 +35,28 @@
                 4px 0 0 0 $color1 inset;
     background-color: white;
 
+    /* Even elements to the right */
+    &:nth-child(even){
+        align-self: flex-end;
+        .date{
+            right: auto;
+            left: -19rem;
+        }
+        &::after{
+            right: auto;
+            left: -14%;
+        }
+    }
+
     /* Dot in the line */
     &::after{
         content: "";
+        display: inline-block;
         position: absolute;
         top: 6px;
-        right: -15%;
+        right: -14%;
         z-index: 1;
         
-        align-self: center;
         height: 1.3rem;
         width: 1.3rem;
         border-radius: 50%;
@@ -78,18 +91,8 @@
     }
 }
 
-/* Even elements to the right */
-.timeline__element:nth-child(even){
-    align-self: end;
-    .date{
-        right: auto;
-        left: -19rem;
-    }
-    &::after{
-        right: auto;
-        left: -15%;
-    }
-}
+
+
 
 /* Remove margin from the last element */
 .timeline__element:last-child{
