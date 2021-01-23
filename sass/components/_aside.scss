@@ -3,8 +3,7 @@
 .main-aside{
     background: $complement;
     overflow: auto;
-    scrollbar-color: lighten($color: $complement, $amount: 10%) transparent;
-    scrollbar-width: thin;
+
     z-index: 2;
 
     display: flex;
@@ -12,6 +11,18 @@
     justify-content: flex-start;
 
     transition: left .4s ease-in-out;
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+       
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+       
+    &::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+    }
 }
 
 .aside-header{
