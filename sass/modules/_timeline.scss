@@ -1,3 +1,53 @@
+/*Animations for the timeline*/
+@-webkit-keyframes slide-right {
+    from {
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
+              opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 1;
+    }
+  }
+  @keyframes slide-right {
+    from {
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
+              opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity:1;
+    }
+  }
+  @-webkit-keyframes slide-left {
+    from {
+      -webkit-transform: translateX(200px);
+              transform: translateX(200px);
+              opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity: 1;
+    }
+  }
+  @keyframes slide-left {
+    from {
+      -webkit-transform: translateX(200px);
+              transform: translateX(200px);
+              opacity: 0;
+    }
+    to {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+              opacity:1;
+    }
+  }
+
 /* Global timeline container */
 .timeline{
     margin: 2em 0;
@@ -15,7 +65,6 @@
         top: 5px;
         right: 50%;
         transform: translateX(50%);
-
         width: 5px;
         height: 99%;
         background-color: rgba($color: $color1, $alpha: .4);
@@ -40,7 +89,6 @@
             border-radius: 50%;
             background-color: $color1;
             box-shadow: 0 0 0 3px darken($color1, 12%);
-        
         }
 
         /* Even elements to the right */
@@ -51,8 +99,18 @@
                 left: -19rem;
             }
         }
+        &:nth-child(odd){
+            -webkit-animation: slide-right 2s linear;
+            animation: slide-right 2s linear;
+        }
+        &:nth-child(even){
+            -webkit-animation: slide-left 2s linear;
+            animation: slide-left 2s linear;
+        }
     }
 }
+
+
 
 /* Individual element of the timeline */
 .timeline__element{
@@ -67,6 +125,7 @@
                 4px 0 0 0 $color1 inset;
     background-color: white;
 
+    
     
     .title{
         color: darken($color1, 12%);
