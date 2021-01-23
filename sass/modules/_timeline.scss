@@ -20,6 +20,38 @@
         height: 99%;
         background-color: rgba($color: $color1, $alpha: .4);
     }
+    &__row{
+        width: 100%;
+        position: relative;
+        margin-bottom: 3rem;
+        display: flex;
+
+        /* Dot in the line */
+        &::after{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 6px;
+            right: 50%;
+            transform: translate(50%);
+            z-index: 1;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            background-color: $color1;
+            box-shadow: 0 0 0 3px darken($color1, 12%);
+        
+        }
+
+        /* Even elements to the right */
+        &:nth-child(even){
+            justify-content: flex-end;
+            .date{
+                right: auto;
+                left: -19rem;
+            }
+        }
+    }
 }
 
 /* Individual element of the timeline */
@@ -35,36 +67,7 @@
                 4px 0 0 0 $color1 inset;
     background-color: white;
 
-    /* Even elements to the right */
-    &:nth-child(even){
-        align-self: flex-end;
-        .date{
-            right: auto;
-            left: -19rem;
-        }
-        &::after{
-            right: auto;
-            left: -14%;
-        }
-    }
-
-    /* Dot in the line */
-    &::after{
-        content: "";
-        display: inline-block;
-        position: absolute;
-        top: 6px;
-        right: -14%;
-        z-index: 1;
-        
-        height: 1.3rem;
-        width: 1.3rem;
-        border-radius: 50%;
-        background-color: $color1;
-        box-shadow: 0 0 0 3px darken($color1, 12%);
     
-    }
-
     .title{
         color: darken($color1, 12%);
     }
@@ -90,7 +93,6 @@
         text-justify: inter-word;
     }
 }
-
 
 
 
