@@ -34,11 +34,13 @@
 	justify-content: flex-end;
 	background: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
 	overflow: hidden;
 	margin: 20px;
 	background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%), 
 		radial-gradient( 91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100% );
 	transform: scale(0.9);
+
 	&::before,
 	&::after {
 		content: "";
@@ -47,7 +49,7 @@
 		left: 0;
 		width: 400px;
 		height: 800px;
-		background-image: radial-gradient( circle 248px at center, #16d9e3 0%, #30c7ec 47%,#46aef7 100%);
+		background-image: radial-gradient( circle 248px at center, #81B71A 47%,#709F17 100%);
 		opacity: 0.6;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		animation: slide-in var(--time) cubic-bezier(0.19, 1, 0.22, 1) both;
@@ -131,12 +133,12 @@ form.form {
 					&:focus ~ .fieldinfo {
 						font-size: 12px;
 						top: -12%;
-						color: #27ae60;
+						color: #709F17;
 					}
 					&.hasvalue ~ .fieldinfo {
 						font-size: 12px;
 						top: -12%;
-						color: #27ae60;
+						color: #709F17;
 					}
 				}
 				.fieldinfo {
@@ -159,13 +161,19 @@ form.form {
 					height: 100%;
 					width: 180px;
 					border-radius: 40px;
-					background: #2ecc71;
+					background: #709F17;
 					border: none;
 					color: #fff;
 					font-size: 18px;
 					cursor: pointer;
 					box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
 					margin: 0 50px;
+					transition: 0.5s all;
+
+					&:hover{
+						transition: 0.5s all;
+						background-color: #81B71A;
+					}
 				}
 			}
 			&._3 {
@@ -207,6 +215,42 @@ form.form {
 
 @media only screen and (max-width: 650px) {
 	.app{
+		width: 90%;
+		height: 84%;
+		position: fixed;
+		top: 100px;
+		transform: translateY(-0%);
+		margin: 0 auto;
+	}
+	form.form{
+		& .user_field{
+		padding-top: 0;
+
+			& .row{
+				grid-template-columns: 1fr ;
+				margin-bottom: 0 ;
+
+				& .textfield input{
+					width: 100% ;
+					margin-bottom: 3vh;
+					padding-bottom: 12px ;
+				}
+			}
+			& .row._3 .textfield{
+				width: 100% ;
+				margin-bottom: 4vh ;
+			}
+			& .row._4 .btn.submit{
+				margin: 0 auto;
+				margin-top: 20px;
+			}
+		}
+	}
+	
+}
+
+/*@media only screen and (max-width: 650px) {
+	.app{
 		width: 600px;
 		height: 550px;
 		position: fixed;
@@ -216,3 +260,4 @@ form.form {
 		margin: 0 20px;
 	}
 }
+*/

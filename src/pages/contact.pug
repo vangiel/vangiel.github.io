@@ -6,7 +6,7 @@ block header
 
 block section
     .app
-        form.form
+        form(action="https://formspree.io/dani1610@hotmail.com" method="POST" enctype="text/plain").form
             h1.app-info Contact me
             .user_field
                 .row._1(style="--index: 0")
@@ -27,7 +27,7 @@ block section
                     .textfield
                         textarea(placeholder="Not working yet my email is dani1610@hotmail.com").text-input
                 .row._4(style="--index: 3")
-                    button.submit.btn Submit
+                    button(type="submit" value="send").submit.btn Submit
 
 append scripts
     script(src="../js/contact.js")
