@@ -6,28 +6,28 @@ block header
 
 block section
     .app
-        form(action="https://formspree.io/dani1610@hotmail.com" method="POST" enctype="text/plain").form
+        form(action="https://formspree.io/f/mrgojyva" method="POST").form
             h1.app-info Contact me
             .user_field
                 .row._1(style="--index: 0")
                     .textfield
-                        input(type="text").text-input
+                        input(type="text" name="name" required).text-input
                         span.fieldinfo Name
                     .textfield
-                        input(type="email").text-input
+                        input(type="email" name="email" required).text-input
                         span.fieldinfo Email
                 .row._2(style="--index: 1")
                     .textfield
-                        input(type="number").text-input
+                        input(type="number" name="number" required).text-input
                         span.fieldinfo Phone
                     .textfield
-                        input(type="text").text-input
+                        input(type="text" name="contactHours" required).text-input
                         span.fieldinfo Contact Hours
                 .row._3(style="--index: 2")
                     .textfield
-                        textarea(placeholder="Not working yet my email is dani1610@hotmail.com").text-input
+                        textarea(placeholder="Not working yet my email is dani1610@hotmail.com" name="message" required).text-input
                 .row._4(style="--index: 3")
-                    button(type="submit" value="send").submit.btn Submit
+                    button(type="submit" value="Submit").submit.btn Submit
 
 append scripts
     script(src="../js/contact.js")
