@@ -101,11 +101,11 @@
         }
         &:nth-child(odd){
             -webkit-animation: slide-right 2s linear;
-            animation: slide-right 2s linear;
+            animation: slide-right 1s linear;
         }
         &:nth-child(even){
             -webkit-animation: slide-left 2s linear;
-            animation: slide-left 2s linear;
+            animation: slide-left 1s linear;
         }
     }
 }
@@ -168,10 +168,18 @@
     }
     .timeline{
         display: block;
+
+        &__row{
+            animation: none !important;
+        }
+
+        &::after{
+            height: 96.5%;
+        }
     }
     .timeline__element{
         width: 100%;
-        z-index: 100;
+        z-index: 2;
         &::after{
             content: normal;
         }
