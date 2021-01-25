@@ -174,26 +174,36 @@ $iconSize : 1.8em;
         margin: 0 10px;
         padding: 0;
 
-        font-size: 35px;
+        font-size: 32px;
         color: $complement;
         text-align: center;
 
-        &:hover{
-            background-color: #fff;
-        }
+        
 
-        /*&.orcid{
+        &.orcid{
             background-image:url(/img/favicon/orcid.svg);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: 120%;
-        }*/
+            height: 100%;
+            width: 35px;
+            margin: 0;
+            margin-left: 10px;
+
+        }
+        &.research-gate{
+            background-image:url(/img/favicon/researchgate.svg);
+            background-position:center;
+            background-repeat: no-repeat;
+            height: 75%;
+            width: 30px;
+        }
 
         i{
             display: block;
             position: absolute;
             top: -4px;
             left: -1px;
+            
         }
 
     }

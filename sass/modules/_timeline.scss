@@ -185,7 +185,8 @@
             content: normal;
         }
         .date{
-            position: static;
+            width: fit-content;
+            position: unset;
             margin-top: 10px;
         }
     }
