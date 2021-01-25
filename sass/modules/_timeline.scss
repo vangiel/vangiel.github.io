@@ -66,7 +66,7 @@
         right: 50%;
         transform: translateX(50%);
         width: 5px;
-        height: 99%;
+        height: 100%;
         background-color: rgba($color: $color1, $alpha: .4);
     }
     &__row{
@@ -74,6 +74,10 @@
         position: relative;
         margin-bottom: 3rem;
         display: flex;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
 
         /* Dot in the line */
         &::after{
@@ -137,7 +141,7 @@
 
     .date{
         position: absolute;
-        width: fit-content;
+        width: auto;
         padding: .5em .9em;
         border-radius: 10px;
         top: -2px;
@@ -174,7 +178,7 @@
         }
 
         &::after{
-            height: 96.5%;
+            height: 99%;
         }
     }
     .timeline__element{

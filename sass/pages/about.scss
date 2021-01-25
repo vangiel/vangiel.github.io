@@ -145,6 +145,7 @@ $headeHeight: 25rem;
 
   .section-title{
     display: flex;
+    align-items: center;
     margin: auto;
 
     h1{
@@ -156,6 +157,7 @@ $headeHeight: 25rem;
     img{
       display: block;
       width: 2.5em;
+      height: 100%;
       margin-right: .8em;
     }
   }
