@@ -189,6 +189,10 @@ $iconSize : 1.8em;
             margin: 0;
             margin-left: 10px;
 
+            transition: 0.5s all;
+            &:hover{
+                filter: invert(95%) sepia(5%) saturate(22%) hue-rotate(270deg) brightness(106%) contrast(106%);
+            }
         }
         &.research-gate{
             background-image:url(/img/favicon/researchgate.svg);
@@ -197,6 +201,11 @@ $iconSize : 1.8em;
             background-size: cover;
             height: 100%;
             width: 32px;
+
+            transition: 0.5s all;
+            &:hover{
+                filter: invert(95%) sepia(5%) saturate(22%) hue-rotate(270deg) brightness(106%) contrast(106%);
+            }
         }
 
         i{
@@ -205,6 +214,10 @@ $iconSize : 1.8em;
             top: -4px;
             left: -1px;
             
+            transition: 0.5s all;
+            &:hover{
+                filter: invert(95%) sepia(5%) saturate(22%) hue-rotate(270deg) brightness(106%) contrast(106%);
+            }
         }
 
     }
