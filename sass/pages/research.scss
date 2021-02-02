@@ -26,6 +26,7 @@ $imgCoverPath: "../img/research/cover.jpg";
     &.demos{
         width: 560px;
         height: 315px;
+        margin-bottom: 10vh;
     }
 
     a{
@@ -50,5 +51,9 @@ $imgCoverPath: "../img/research/cover.jpg";
             margin-bottom: 5px;
         }
         
+        &.demos{
+            margin-top: 0;
+        
+        }
     }
 }
