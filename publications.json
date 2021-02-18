@@ -1,4 +1,29 @@
 [
+{
+	"year": "2021",
+	"title": "A Graph Neural Network to Model User Comfort in Robot Navigation",
+	"author": ["Pilar Bachiller", "Daniel Rodriguez-Criado", "Ronit R. Jorvekar", "Pablo Bustos", "Diego R. Faria", "Luis J. Manso"],
+	"in": "arXiv 2102.08863 2021",
+	"type": "jpaper",
+	"download": "https://arxiv.org/pdf/2102.08863.pdf",
+	"url": "https://arxiv.org/abs/2102.08863",
+	"abstract": "Minimising the discomfort caused by robots when navigating in social situations is crucial for them to be accepted. The paper presents a machine learning-based framework that bootstraps existing one-dimensional datasets to generate a cost map dataset and a model combining Graph Neural Network and Convolutional Neural Network layers to produce cost maps for human-aware navigation in real-time. The proposed framework is evaluated against the original one-dimensional dataset and in simulated navigation tasks. The results outperform similar state-of-the-art-methods considering the accuracy on the dataset and the navigation metrics used. The applications of the proposed framework are not limited to human-aware navigation, it could be applied to other fields where map generation is needed. ",
+	"key": "bachiller2021graph",
+	"pages": "21"
+},
+
+{
+	"year": "2020",
+	"title": "Generation of Human-aware Navigation Maps using Graph Neural Networks",
+	"author": ["Daniel Rodriguez-Criado", "Pilar Bachiller","Luis J. Manso"],
+	"in": "arXiv 2011.05180 2020",
+	"type": "cpaper",
+	"download": "https://arxiv.org/pdf/2011.05180",
+	"url": "https://arxiv.org/abs/2011.05180",
+	"abstract": "Minimising the discomfort caused by robots when navigating in social situations is crucial for them to be accepted. The paper presents a machine learning-based framework that bootstraps existing one-dimensional datasets to generate a cost map dataset and a model combining Graph Neural Network and Convolutional Neural Network layers to produce cost maps for human-aware navigation in real-time. The proposed framework is evaluated against the original one-dimensional dataset and in simulated navigation tasks. The results outperform similar state-of-the-art-methods considering the accuracy on the dataset and the navigation metrics used. The applications of the proposed framework are not limited to human-aware navigation, it could be applied to other fields where map generation is needed. ",
+	"key": "rodriguezcriado2020generation",
+	"pages": "6"
+},
 
 {
 	"year": "2020",
