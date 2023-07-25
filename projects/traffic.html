@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Synthesizing Traffic Datasets using Graph Neural Networks | Daniel Rodriguez-Criado</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/favicon/rocket-solid.png">
+    <script src="https://kit.fontawesome.com/55d924b99d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/projects/traffic.css">
+  </head>
+  <body>
+    <div class="global-container">
+      <main class="main-content">
+        <header><img class="brands__img" src="../img/projects/traffic/brands.png" alt="aston and traffic2D logos">
+          <h1>Synthesizing Traffic Datasets using Graph Neural Networks</h1>
+          <h3>Daniel Rodriguez-Criado, Maria Chli, Luis J. Manso, George Vogiatzis</h3>
+          <nav class="links-header"><a href="https://github.com/gvogiatzis/trafficgen">Code<i class="fab fa-github-square"></i></a><a href="">Paper<i class="fab fa-solid fa-newspaper"></i></a></nav>
+        </header>
+        <section class="video-section">
+          <div class="video-container">
+            <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/IBHhBGULmB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <h2>Presentation video of the tool to generate images manually and the results from SUMO simulator.</h2>
+        </section>
+        <section class="abstract-section">
+          <h1>Abstract</h1>
+          <p class="abstract-section__text">
+            Traffic congestion in urban areas presents significant challenges, and Intelligent Transportation Systems (ITS) have sought to address these via automated and adaptive controls.
+            However, these systems often struggle to transfer simulated experiences to real-world scenarios.
+            This paper introduces a novel methodology for bridging this `sim-real' gap by creating photorealistic images from 2D traffic simulations and recorded junction footage.
+            We propose a novel image generation approach, integrating a Conditional Generative Adversarial Network (cGAN) with a Graph Neural Network (GNN) to facilitate the creation of realistic urban traffic images.
+            We harness GNNs' ability to process abstract information alongside segmented images for preserving locality data.
+            The presented architecture leverages the power of SPADE and Graph Attention network (GAT)  models to create images based on traffic scenarios simulated by SUMO.
+            These images are conditioned by factors such as entity positions, colours, and time of day.
+            The uniqueness of our approach lies in its ability to effectively translate structured and human-readable conditions, encoded as graphs, into realistic images.
+            This advancement contributes to applications requiring rich traffic image datasets, from data augmentation to urban traffic solutions.
+            We further provide an application to test the model's capabilities, including generating images with manually defined positions for various entities.
+          </p>
+        </section>
+        <section class="results-section">
+          <h1 class="results-section__text">Results</h1><img class="results-section__img" src="../img/projects/traffic/visual_results_traffic.png" alt="visual results">
+        </section>
+        <section class="cite-section">
+          <h1>BibTex</h1>
+          <p class="cite-section__bibtex">
+            @article{rodriguez2023traffic,
+            <br><span>title = {Synthesizing traffic datasets using graph neural networks}</span>,
+            <br><span>author = {Rodriguez-Criado, Daniel and Chli, Maria and Vogiatzis, George and Manso, Luis J}</span>,
+            <br><span>booktitle = {International Conference on Intelligent Transportation Systems}</span>,
+            <br><span>year = {2023}</span>,
+            <br><span>organization = {IEEE}</span>,
+            <br>}
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

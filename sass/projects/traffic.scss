@@ -1,0 +1,98 @@
+@import "../base/variables";
+@import "../libraries/normalize.scss";
+
+.global-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 2000px;
+  margin: auto;
+  min-height: 100%;
+  box-shadow: 0 -20px 15px 4px rgba(#333, .5);
+
+  .main-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background: #fff;
+    padding: 0 5%;
+    min-height: 100vh;
+
+    header{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      .brands__img{
+        max-height: 10em;
+      }
+      .links-header{
+        display: flex;
+        justify-content: space-around;
+        width: 10em;
+        a{
+          display: block;
+          text-decoration: none;
+          color: #fff;
+          background-color: #2B303B;
+          padding: 5px;
+          border-radius: 25px;
+        }
+      }
+    }
+
+    .video-section{
+      h2{
+        text-align: center;
+      }
+      .video-container {
+        margin-top: 20px;
+        padding-top: 56.25%;
+        height: 0;
+        position: relative;
+      }
+
+      .video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .abstract-section{
+      h1{
+        text-align: center;
+      }
+      &__text{
+        max-width: 20cm;
+        text-align: justify;
+      }
+    }
+
+    .results-section{
+      &__text{
+        text-align: center;
+      }
+      &__img{
+        max-width: 100%;
+      }
+    }
+
+    .cite-section{
+      &__bibtex{
+        margin-bottom: 1.5em;
+        overflow: auto;
+        white-space: nowrap;
+
+        span {
+          margin-left: 40px;
+        }
+      }
+    }
+
+  }
+}
+
