@@ -183,22 +183,22 @@
 
             <ul>
               <li>Write the contributor's(user's) name so that the data saved can be marked by the users name.</li>
-              <img src="../images/sonata/get_contributer.png">
+              <img src="../img/projects/get_contributer.png">
 
               <li>After this the simulation will start with a green tint, and until the mouse controller is clicked robot will not move. </li>
-              <img src="../images/sonata/simulation_green_start.png"  width="570" height="350">
+              <img src="../img/projects/sonata/simulation_green_start.png"  width="570" height="350">
 
               <li>Select the configuration from the top bar of the SONATA GUI to select the range of different entities you want to add in the scene. You can also regenerate a scene if you don't like the settings of entities by using the regenerate button from the top bar. We also provided blue lines between two entities to show that they are interacting with each other.</li>
-              <img src="../images/sonata/select_range.png"  width="250" height="400">
+              <img src="../img/projects/sonata/select_range.png"  width="250" height="400">
 
               <li>click on the mouse controller and hold the left key and drag the mouse to move the robot in that direction.</li>
-              <img src="../images/sonata/click_joystick.png"  width="300" height="300">
+              <img src="../img/projects/sonata/click_joystick.png"  width="300" height="300">
 
               <li>Move the robot to the goal marked by the cone.</li>
-              <img src="../images/sonata/reach_goal.png"  width="570" height="350">
+              <img src="../img/projects/sonata/reach_goal.png"  width="570" height="350">
 
               <li>Save your data.</li>
-              <img src="../images/sonata/save.png"  width="570" height="350">
+              <img src="../img/projects/sonata/save.png"  width="570" height="350">
             </ul>
 
             <p>After you click and save the data, a JSON file is generated and the full episode gets saved with timestamps. For the usecase we take these JSONs and convert them into graphs using socnavData data loader, which is then fed into the GNNs. Once the model is trained you can run the toolkit in test mode by setting TEST_MODE boolean to true in the controller's specificworker.py file.</p>
