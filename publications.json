@@ -1,5 +1,19 @@
 [
+
 {
+	"title": "Synthesizing Traffic Datasets using Graph Neural Networks",
+	"author": ["Daniel Rodriguez-Criado", "Maria Chli",  "Luis J. Manso", "George Vogiatzis"],
+	"year": "2023",
+	"month": "jul",
+	"day": "10",
+	"language": "English",
+	"booktitle": "Proceedings of IEEE 26th International Conference on Intelligent Transportation Systems ITSC",
+	"publisher": "IEEE",
+	"address": "United States",
+	"url": "https://2023.ieee-itsc.org/"
+},
+
+	{
 	"year": "2021",
 	"title": "A Graph Neural Network to Model User Comfort in Robot Navigation",
 	"author": ["Pilar Bachiller", "Daniel Rodriguez-Criado", "Ronit R. Jorvekar", "Pablo Bustos", "Diego R. Faria", "Luis J. Manso"],
