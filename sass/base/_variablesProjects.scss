@@ -1,0 +1,23 @@
+// Colors pantone
+
+$color1 : #191919;
+$color2 : #111111;
+$complement : #2B303B;
+
+$colorText1: #788195;
+$colorText2 : #556F44;
+
+// Breakpoints
+$breakpoints : (
+				s  : 0,
+				m  : 740px,
+				ml : 980px,
+				l  : 1024px,
+				xl : 1440px
+);
+
+// Dimensions
+
+$asideWidth : 300px;
+$mainMargin : 0px;
+$headeHeigh : 4.5em;

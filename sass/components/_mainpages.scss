@@ -1,0 +1,105 @@
+.main-content{
+    padding: 2em;
+
+    p{
+        font-size: 1.1em;
+        text-align: justify;
+        text-justify: inter-word;
+
+        margin-bottom: .4em;
+    }
+
+    .main-section{
+        &__title{
+            margin: 10px 0;
+            padding: .75em;
+            background-color: lighten($color1, 15%);
+            &:hover{
+                background-color: $color1;
+            }
+    
+            a{
+                color: white;
+                font-size: .8em;
+                display: block;
+            }
+        }
+
+        &__content{
+            padding: .5em 1em;
+
+            h1{
+                font-weight: bold;
+                margin: 0;
+                margin-bottom: .3em;
+            }
+            h2{
+                font-weight: bold;
+                margin-bottom: .3em;
+            }
+
+            ul, ol{
+                padding-left: 2em;
+                margin: 1em 0;
+
+                li{
+                    font-size: 1.2rem;
+                    text-align: justify;
+                    text-justify: inter-word;
+                }
+            }
+
+            ul{
+                list-style: disc outside none;
+            }
+
+            pre{
+                background-color: #EEF1F2;
+                overflow-x: auto;
+                code.json{
+                    font-family: monospace;
+                    
+                }
+            }
+
+            a{
+                color: darken(#71E6FE,40%);
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+
+            i{
+                font-style: italic;
+                font-weight: 100 !important;
+            }
+        }
+    }
+}
+
+img, video{
+    display: block;
+    margin: 2em auto;
+    max-width: 90%;
+    height: auto;
+}
+
+figcaption{
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: calc(min(800px, 100%) * 0.5625) ; /* 16:9 */
+    height: 0;
+    margin: 2em auto;
+    max-width: 800px;
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  }

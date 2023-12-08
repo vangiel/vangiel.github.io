@@ -1,12 +1,15 @@
-// Import libraries and variables.
+// Import mixins and variables.
 
 @import "base/variables";
-@import "libraries/normalize.scss";
+@import "base/mixins";
 
-// Import base styles and mixins
+// Import base styles
 
 @import "base/base";
-@import "base/mixins";
+
+// Import layouts
+
+@import "layouts/_mainLayout";
 
 // Import basic components of the whole project. Themes
 

@@ -1,0 +1,36 @@
+.global-container{
+  max-width: 2000px;
+  margin: auto;
+  min-height: 100%;
+  box-shadow: 0 -20px 15px 4px rgba(#333, .5);
+
+  .main-aside{
+    position: fixed;
+    top: 0;
+    width: $asideWidth;
+    height: 100%;
+  }
+  .main-content{
+    background: #fff;
+    margin-left: $asideWidth + $mainMargin;
+    margin-right: $mainMargin;
+    min-height: 100vh;
+    transition: .4s margin ease-in-out;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, m)){
+    .aside-header__img-container{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)){
+    .main-aside{
+      left: -$asideWidth;
+    }
+    .main-content{
+      margin: 0;
+    }
+
+  }
+}
