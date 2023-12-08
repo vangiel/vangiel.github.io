@@ -10,6 +10,9 @@
 	"booktitle": "Proceedings of IEEE 26th International Conference on Intelligent Transportation Systems ITSC",
 	"publisher": "IEEE",
 	"address": "United States",
+	"in": "Proceedings of IEEE 26th International Conference on Intelligent Transportation Systems ITSC",
+	"abstract": "Traffic congestion in urban areas presents significant challenges, and Intelligent Transportation Systems (ITS) have sought to address these via automated and adaptive controls. However, these systems often struggle to transfer simulated experiences to real-world scenarios. This paper introduces a novel methodology for bridging this `sim-real' gap by creating photorealistic images from 2D traffic simulations and recorded junction footage. We propose a novel image generation approach, integrating a Conditional Generative Adversarial Network with a Graph Neural Network (GNN) to facilitate the creation of realistic urban traffic images. We harness GNNs' ability to process information at different levels of abstraction alongside segmented images for preserving locality data. The presented architecture leverages the power of SPADE and Graph ATtention (GAT) network models to create images based on simulated traffic scenarios. These images are conditioned by factors such as entity positions, colors, and time of day. The uniqueness of our approach lies in its ability to effectively translate structured and human-readable conditions, encoded as graphs, into realistic images. This advancement contributes to applications requiring rich traffic image datasets, from data augmentation to urban traffic solutions. We further provide an application to test the model's capabilities, including generating images with manually defined positions for various entities.",
+	"type": "cpaper",
 	"key": "rodriguezcriado2023traffic",
 	"url": "https://2023.ieee-itsc.org/"
 },
