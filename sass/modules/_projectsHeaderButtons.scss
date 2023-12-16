@@ -1,0 +1,22 @@
+.links-header{
+  margin-top: .8rem;
+  display: flex;
+  gap: 1em;
+  & > a{
+    display: flex;
+    gap: .5em;
+    align-items: center;
+
+    padding: .5em 1em;
+    background-color: lighten(#000, 40);
+    border-radius: 1em;
+
+    color: white;
+    font-weight: bold;
+
+    &:hover,
+    &:focus{
+      background-color: lighten(#000, 10);
+  }
+}
+}

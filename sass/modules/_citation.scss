@@ -1,0 +1,8 @@
+[class$="__bibtex"]{
+  overflow-x: auto;
+  & > p{
+    background-color: #DCDCDC;
+    padding: 2em;
+    min-width: calc(map-get($breakpoints,m) - 12em);
+  }
+}
