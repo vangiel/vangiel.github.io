@@ -14,7 +14,6 @@
 
   aside.main-aside{
     position: fixed;
-    z-index: 1;
     top: 0;
     bottom: 0;
     overflow-y: auto;
@@ -35,6 +34,7 @@
 @media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)){
   .main-aside{
     left: -$asideWidth;
+    z-index: 200;
   }
   main.main-content{
     margin: 0 !important;
@@ -48,13 +48,15 @@ header.main-header{
 
   h1{
     color: white;
-    padding-left: $asideWidth;
+    padding-left: calc($asideWidth + 1em);
     margin: 0;
     margin-top: .5em;
 
     @media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)){
-      padding: 0 10px;
-      padding-left: 3em;
+      padding-top: .4em;
+      padding-bottom: .2em;
+      padding-left: 3.2em;
+      padding-right: .5em;
       text-align: center;
       font-size: 1.6em;
     }
@@ -64,7 +66,7 @@ header.main-header{
 /* Main aside styles */
 
 .main-aside{
-  background-color: $color1;
+  background-color: $complement;
   color: white;
   text-align: center;
 
@@ -85,8 +87,8 @@ header.main-header{
 
   &__nav-filter{
     input{
-      border-radius: 0%;
-      background-color: $color2;
+      border-radius: 0;
+      background-color: $colorText1;
       color: white;
       width: 80%;
 

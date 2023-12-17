@@ -13,15 +13,22 @@
         &__title{
             margin: 10px 0;
             padding: .75em;
-            background-color: lighten($color1, 15%);
+            background-color: lighten($complement, 15%);
+            position: sticky;
+            top: .2em;
+            z-index: 100;
             &:hover{
-                background-color: $color1;
+                background-color: $complement;
             }
     
             a{
                 color: white;
                 font-size: .8em;
                 display: block;
+            }
+
+            @media screen and (max-width: map-get($breakpoints, m)) {
+                top: 0;
             }
         }
 

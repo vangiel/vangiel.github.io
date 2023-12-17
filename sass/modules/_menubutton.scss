@@ -4,16 +4,10 @@ input#menu-icon{
 
 label{
 
-    i.fas.fa-bars{
-        color: $complement;
-        font-size: 30px;
-        cursor: pointer;
-    }
-
     position: fixed;
-    top: 30px;
-    left: 30px;
-    z-index: 300;
+    top: 25px;
+    left: 25px;
+    z-index: 400;
 
     background-color: lighten($color: $complement, $amount: 50%);
     padding: 5px 10px;
@@ -41,8 +35,6 @@ label{
         }
 
         &:checked + label{
-            left: 1em;
-            background-color: transparent;
             i.fas{
                 color: lighten($color: $complement, $amount: 40%);
             }
@@ -63,7 +55,6 @@ label{
         }
 
         &:checked + label{
-            background-color: transparent;
             i.fas{
                 color: lighten($color: $complement, $amount: 40%);
             }
