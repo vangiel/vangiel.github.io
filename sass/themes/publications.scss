@@ -1,7 +1,7 @@
 $imgCoverPath: "../img/publications/cover.jpg";
 
 @import "../mainStyles";
-@import "../components/header";
+@import "../layouts/header";
 
 .main-content{
     background-color: lighten($complement, 76%) !important;

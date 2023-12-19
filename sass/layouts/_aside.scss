@@ -1,5 +1,3 @@
-@import "../modules/menubutton";
-
 .main-aside{
     background: $complement;
     overflow: auto;
@@ -168,7 +166,8 @@ $iconSize : 1.8em;
     min-height: 3rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    //align-items: center;
+    gap: 1.3em;
 
     background-color: darken($color: $complement, $amount: 8%); 
 
@@ -176,56 +175,16 @@ $iconSize : 1.8em;
         display: block;
         height: 25px;
         width: 25px;
-        position: relative;
-
-
-        margin: 0 10px;
         padding: 0;
+        margin-top: .2em;
 
         font-size: 32px;
-        color: $complement;
+        color: lighten($complement, 20);
         text-align: center;
+        transition: 0.5s all;
 
-        
-
-        &.orcid{
-            background-image:url(/img/favicon/orcid.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100%;
-            width: 35px;
-            margin: 0;
-            margin-left: 10px;
-
-            transition: 0.5s all;
-            &:hover{
-                filter: invert(95%) sepia(5%) saturate(22%) hue-rotate(270deg) brightness(106%) contrast(106%);
-            }
-        }
-        &.research-gate{
-            background-image:url(/img/favicon/researchgate.svg);
-            background-position:center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100%;
-            width: 32px;
-
-            transition: 0.5s all;
-            &:hover{
-                filter: invert(95%) sepia(5%) saturate(22%) hue-rotate(270deg) brightness(106%) contrast(106%);
-            }
-        }
-
-        i{
-            display: block;
-            position: absolute;
-            top: -4px;
-            left: -1px;
-            
-            transition: 0.5s all;
-            &:hover{
-                filter: invert(95%) sepia(5%) saturate(22%) hue-rotate(270deg) brightness(106%) contrast(106%);
-            }
+        &:hover{
+            filter: invert(95%) sepia(5%) saturate(22%) hue-rotate(270deg) brightness(106%) contrast(106%);
         }
 
     }

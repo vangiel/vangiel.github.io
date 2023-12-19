@@ -1,23 +1,19 @@
-// Import mixins and variables.
-
-@import "base/variables";
-@import "base/mixins";
-
 // Import base styles
 
-@import "base/base";
+@import "base/_variables";
+@import "base/_mixins";
+@import "base/_base";
 
 // Import layouts
 
+@import "layouts/aside";
 @import "layouts/_mainLayout";
 
 // Import basic components of the whole project. Themes
 
-@import "components/aside";
+@import "modules/_menubutton";
 
-// Import modules
 
-@import "modules/titles";
 
 
 
