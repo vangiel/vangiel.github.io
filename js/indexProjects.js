@@ -1,6 +1,11 @@
 const menuIcon = document.getElementById("menu-icon");
 const bodyElement = document.getElementsByTagName("body")[0];
 
+
+window.addEventListener('popstate', function(event) {
+    menuIcon.checked = false;
+}, false);
+
 menuIcon.addEventListener("change", function() {
     if (menuIcon.checked === true && window.matchMedia("(max-width: 740px)").matches) {
         bodyElement.setAttribute("style", "height: 100dvh;");
