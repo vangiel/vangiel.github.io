@@ -4,10 +4,6 @@ const inputCheckbox = document.querySelector("#menu-icon")
 const bodyElement = document.querySelector("body")
 const x = window.matchMedia("(max-width: 740px)")
 
-window.addEventListener('popstate', function(event) {
-    inputCheckbox.checked = false
-}, false);
-
 inputCheckbox.addEventListener('change', (event) => {
     if (event.target.checked){
         bodyElement.style.overflow = "hidden"
