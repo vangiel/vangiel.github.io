@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Daniel Rodriguez Criado - Research projects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <link rel="icon" type="image/png" href="../img/favicon/rocket-solid.png"> -->
+    <script src="https://kit.fontawesome.com/55d924b99d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/projects/projectStyles.css">
+  </head>
+  <body>
+    <div class="global-container">
+      <input type="checkbox" id="menu-icon">
+      <label for="menu-icon"><i class="fas fa-bars"></i></label>
+      <header class="main-header">
+        <h1 class="main-header__title">My research projects page</h1>
+      </header>
+      <aside class="main-aside">
+        <h1 class="main-aside__title"><a href="../pages/research.html">Research projects</a></h1>
+        <div class="main-aside__nav-filter">
+          <input type="text" id="filter" onkeyup="myFilter()" placeholder="Search for projects...">
+        </div>
+        <nav class="main-nav">
+          <ul class="main-menu" id="menu">
+            <li class="main-menu__item"><a href="traffic.html">Generation of traffic images</a></li>
+            <li class="main-menu__item"><a href="sonata.html">Sonata</a></li>
+            <li class="main-menu__item"><a href="sngnn1d.html">SNGNN1D</a></li>
+            <li class="main-menu__item--active"><a href="#">SNGNN1D-V2</a>
+                <ul class="main-menu__submenu">
+                    <li class="submenu__item"><a href="#motivation">Motivation</a></li>
+                </ul>
+            </li>
+            <li class="main-menu__item"><a href="sngnn2d.html">SNGNN2D</a></li>
+            <li class="main-menu__item"><a href="datasets.html">Datasets</a></li>
+         </ul>
+        </nav>
+      </aside>
+      <main class="main-content">
+
+        <p><b>SNGNN</b> is a Graph Neural Network to model adherence to social-navigation conventions for robots. Given a particular scenario composed of a room with any number of walls, objects and people (who can be interacting with each other) the network provides a social adherence ratio from 0 to 1. This information can be used to plan paths for human-aware navigation.
+        <p>
+        <br/>
+
+        <a href="https://github.com/robocomp/sngnn">GitHub repository</a>.
+
+        <section class="main-section">
+          <h2 class="main-section__title"><a name="motivation">Motivation</a></h2>
+          <div class="main-section__content">
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </body>
+  <script src="../../js/indexProjects.js"></script>
+  <script src="../../js/filters.js"></script>
+</html>

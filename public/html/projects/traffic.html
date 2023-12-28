@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Daniel Rodriguez Criado - Research projects</title>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- <link rel="icon" type="image/png" href="../img/favicon/rocket-solid.png"> -->
+  <script src="https://kit.fontawesome.com/55d924b99d.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/projects/projectStyles.css">
+</head>
+<body>
+<div class="global-container">
+  <input type="checkbox" id="menu-icon">
+  <label for="menu-icon"><i class="fas fa-bars"></i></label>
+  <header class="main-header">
+    <h1 class="main-header__title">My research projects page</h1>
+  </header>
+  <aside class="main-aside">
+    <h1 class="main-aside__title"><a href="../pages/research.html">Research projects</a></h1>
+    <div class="main-aside__nav-filter">
+      <input type="text" id="filter" onkeyup="myFilter()" placeholder="Search for projects...">
+    </div>
+    <nav class="main-nav">
+      <ul class="main-menu" id="menu">
+        <li class="main-menu__item--active"><a href="#">Generation of traffic images</a>
+          <ul class="main-menu__submenu">
+            <li class="submenu__item"><a href="#introduction">Introduction</a></li>
+            <li class="submenu__item"><a href="#results">Results</a></li>
+            <li class="submenu__item"><a href="#citation">Citation</a></li>
+          </ul>
+        </li>
+        <li class="main-menu__item"><a href="sonata.html">SONATA</a></li>
+        <li class="main-menu__item"><a href="sngnn1d.html">SNGNN1D</a></li>
+        <li class="main-menu__item"><a href="sngnn1dv2.html">SNGNN1D-V2</a></li>
+        <li class="main-menu__item"><a href="sngnn2d.html">SNGNN2D</a></li>
+        <li class="main-menu__item"><a href="datasets.html">Datasets</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main-content">
+
+    <header><img class="secondary-header brands__img" src="../../img/projects/traffic/brands.png" alt="aston and traffic2D logos">
+      <h1>Synthesizing Traffic Datasets using Graph Neural Networks</h1>
+      <h3>Daniel Rodriguez-Criado, Maria Chli, Luis J. Manso, George Vogiatzis</h3>
+      <nav class="links-header">
+        <a href="https://github.com/gvogiatzis/trafficgen" target="_blank">Code<i class="fab fa-github-square"></i></a>
+        <a href="https://arxiv.org/abs/2312.05031" target="_blank">Paper<i class="fa-regular fa-paper-plane"></i></a>
+      </nav>
+    </header>
+
+    <section class="main-section">
+      <h2 class="main-section__title"><a name="introduction">Introduction</a></h2>
+      <div class="main-section__content">
+        <p>
+          Traffic congestion in urban areas presents significant challenges, and Intelligent Transportation Systems (ITS) have sought to address these via automated and adaptive controls.
+          However, these systems often struggle to transfer simulated experiences to real-world scenarios.
+          This paper introduces a novel methodology for bridging this `sim-real' gap by creating photorealistic images from 2D traffic simulations and recorded junction footage.
+          We propose a novel image generation approach, integrating a Conditional Generative Adversarial Network (cGAN) with a Graph Neural Network (GNN) to facilitate the creation of realistic urban traffic images.
+          We harness GNNs' ability to process abstract information alongside segmented images for preserving locality data.
+          The presented architecture leverages the power of SPADE and Graph Attention network (GAT)  models to create images based on traffic scenarios simulated by SUMO.
+          These images are conditioned by factors such as entity positions, colours, and time of day.
+          The uniqueness of our approach lies in its ability to effectively translate structured and human-readable conditions, encoded as graphs, into realistic images.
+          This advancement contributes to applications requiring rich traffic image datasets, from data augmentation to urban traffic solutions.
+          We further provide an application to test the model's capabilities, including generating images with manually defined positions for various entities.
+        </p>
+
+        <div class="videoWrapper">
+          <iframe width="640" height="350" src="https://www.youtube.com/embed/IBHhBGULmB8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <p>Presentation video of the tool to generate images manually and the results from SUMO simulator.</p>
+      </div>
+    </section>
+
+    <section class="main-section">
+      <h2 class="main-section__title"><a name="results">Results</a></h2>
+      <div class="main-section__content">
+        <img class="results-section__img" src="../../img/projects/traffic/visual_results_traffic.png" alt="visual results">
+      </div>
+    </section>
+
+    <section class="main-section">
+      <h2 class="main-section__title"><a name="citation">Citation</a></h2>
+      <div class="main-section__content">
+        <div class="citation__bibtex">
+          <p>
+            @article{rodriguez2023traffic,
+            <br><span>title = {Synthesizing traffic datasets using graph neural networks}</span>,
+            <br><span>author = {Rodriguez-Criado, Daniel and Chli, Maria and Vogiatzis, George and Manso, Luis J}</span>,
+            <br><span>booktitle = {International Conference on Intelligent Transportation Systems}</span>,
+            <br><span>year = {2023}</span>,
+            <br><span>organization = {IEEE}</span>,
+            <br>}
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+</body>
+<script src="../../js/indexProjects.js"></script>
+<script src="../../js/filters.js"></script>
+</html>
+

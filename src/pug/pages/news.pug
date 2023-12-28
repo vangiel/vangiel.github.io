@@ -1,0 +1,41 @@
+extends ../templates/template
+
+block variables
+    - var subtitle = 'News'
+    - var rootPath = '../../'
+    - var pageName = 'news'
+
+block styles
+    link(rel="stylesheet" href=`${rootPath}css/news.css`)
+
+block header
+    header.main-header
+        .main-header__copy
+            h1 News
+            p Here I will post the news that I consider the most relevant in my field. That is Robotics and Artificial intelligence. Stay posted!
+
+block section
+    section.main-section
+        .new
+            .new__date 19 Nov #[span 2020]
+            .new__content
+                h1.new__title International conference WAF 2020
+                p The 21st International Workshop of Physical Agents (WAF) was suppoused to be held at the Rectorado of the Universitdad de Alcalá in Alcalá de Henares, Madrid, Spain. However, due to the current COVID-19 pandemic it will be online
+
+                p I will be presenting the work titled #[a(href="https://arxiv.org/abs/2009.05345") "A Toolkit to Generate Social Navigation Datasets"]. The presentation will be on 19th of November between 15:00 and 16:00, Madrid time. There will be a 5 minutes Q&amp;A session. Don't hesitate to come over and ask.
+
+                p #[a(href="http://waf2020.uah.es/") Link to WAF website]
+
+        .new
+            .new__date 29 Aug #[span 2020]
+            .new__content
+                h1.new__title International conference RO-MAN 2020
+                p This conference on Robot &amp; Human Interactive Communication was expected to be held in Napoles. However, due to the COVID-19 pandemic situation, it will be hosted online and for free for everyone who wants to attend.
+
+                p I will be presenting the work titled #[a(href="https://arxiv.org/abs/2007.14126") "Multi-camera Torso Pose Estimation using Graph Neural Networks"] the 3rd of September from 11:30 to 12:30. Fell free to join the session and ask any doubts!
+
+                p #[a(href="http://ro-man2020.unina.it/") Link to ROMAN website]
+
+                //- iframe(src="//ro-man2020.unina.it/", height="500" width="90%" title="ROMAN 2020 website")
+
+        
