@@ -6,6 +6,6 @@ addMenuEventListener("#menu-icon")
 if(window.location.href.split("/").pop() === "publications.html"){
     let pubManager: Publications = new Publications('../../publications.json')
 
-    pubManager.printHTML();
+    pubManager.pubJSON()
 }
 
