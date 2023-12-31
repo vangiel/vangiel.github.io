@@ -12,8 +12,7 @@
   }
   .main-content{
     background: #fff;
-    margin-left: $asideWidth + $mainMargin;
-    margin-right: $mainMargin;
+    margin-left: $asideWidth;
     min-height: 100vh;
     transition: .4s margin ease-in-out;
   }

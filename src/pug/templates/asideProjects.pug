@@ -1,0 +1,37 @@
+h1.main-aside__title: a(href=`${rootPath}html/pages/research.html`) Research projects
+.main-aside__nav-filter
+    input(type="text" id="filter" placeholder="Search for projects...")
+
+nav.main-nav
+    ul.main-menu#menu
+        li(class=(pageName === 'traffic') ? 'main-menu__item--active': 'main-menu__item') #[a(href="traffic.html") Generation of traffic images]
+            ul.main-menu__submenu
+                li.submenu__item: a(href="#introduction") Introduction
+                li.submenu__item: a(href="#results") Results
+                li.submenu__item: a(href="#citation") Citation
+        li(class=(pageName === 'sonata') ? 'main-menu__item--active': 'main-menu__item') #[a(href="sonata.html") SONATA]
+            ul.main-menu__submenu
+                li.submenu__item: a(href="#introduction") Introduction
+                li.submenu__item: a(href="#requirements") Software Requirements
+                li.submenu__item: a(href="#usage") How to run the default tool
+                li.submenu__item: a(href="#tutorial") Tutorial: Customize Sonata
+        li(class=(pageName === 'sngnn1d') ? 'main-menu__item--active': 'main-menu__item') #[a(href="sngnn1d.html") SNGNN1D]
+            ul.main-menu__submenu
+                li.submenu__item: a(href="#motivation") Motivation
+                li.submenu__item: a(href="#scenes") Software Requirements
+                li.submenu__item: a(href="#results") How to run the default tool
+                li.submenu__item: a(href="#references") References
+        li(class=(pageName === 'sngnn1dv2') ? 'main-menu__item--active': 'main-menu__item') #[a(href="sngnn1dv2.html") SNGNN1D-V2]
+            ul.main-menu__submenu
+                li.submenu__item: a(href="#motivation") Motivation
+        li(class=(pageName === 'sngnn2d') ? 'main-menu__item--active': 'main-menu__item') #[a(href="sngnn2d.html") SNGNN2D]
+            ul.main-menu__submenu
+                li.submenu__item: a(href="#motivation") Motivation and aims
+                li.submenu__item: a(href="#howtest") How to try our model
+                li.submenu__item: a(href="#dataset") Dataset generation
+                li.submenu__item: a(href="#test") Testing the cost map with an A* planner
+        li(class=(pageName === 'datasets') ? 'main-menu__item--active': 'main-menu__item') #[a(href="datasets.html") Datasets]
+            ul.main-menu__submenu
+                li.submenu__item: a(href="#socnav1") SocNav1
+                li.submenu__item: a(href="#socnav2") SocNav2
+

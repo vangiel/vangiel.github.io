@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Daniel Rodriguez Criado - Research projects</title>
+    <title>Social Navigation Datasets | Daniel Rodriguez-Criado</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- <link rel="icon" type="image/png" href="../img/favicon/rocket-solid.png"> -->
+    <link rel="icon" type="image/png" href="../../img/favicon/rocket-solid.png">
     <script src="https://kit.fontawesome.com/55d924b99d.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/projects/projectStyles.css">
   </head>
   <body>
     <div class="global-container">
-      <input type="checkbox" id="menu-icon">
+      <input type="checkbox" autocomplete="off" id="menu-icon">
       <label for="menu-icon"><i class="fas fa-bars"></i></label>
       <header class="main-header">
-        <h1 class="main-header__title">My research projects page</h1>
+        <h1 class="main-header__title">Social Navigation Datasets</h1>
       </header>
       <aside class="main-aside">
-        <h1 class="main-aside__title"><a href="../pages/research.html">Research projects</a></h1>
+        <h1 class="main-aside__title"><a href="../../html/pages/research.html">Research projects</a></h1>
         <div class="main-aside__nav-filter">
-          <input type="text" id="filter" onkeyup="myFilter()" placeholder="Search for projects...">
+          <input type="text" id="filter" placeholder="Search for projects...">
         </div>
         <nav class="main-nav">
           <ul class="main-menu" id="menu">
-            <li class="main-menu__item"><a href="traffic.html">Generation of traffic images</a></li>
-            <li class="main-menu__item"><a href="sonata.html">Sonata</a></li>
-            <li class="main-menu__item"><a href="sngnn1d.html">SNGNN1D</a></li>
-            <li class="main-menu__item"><a href="sngnn1dv2.html">SNGNN1D-V2</a></li>
-            <li class="main-menu__item"><a href="sngnn2d.html">SNGNN2D</a></li>
+            <li class="main-menu__item"><a href="traffic.html">Generation of traffic images</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#introduction">Introduction</a></li>
+                <li class="submenu__item"><a href="#results">Results</a></li>
+                <li class="submenu__item"><a href="#citation">Citation</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a href="sonata.html">SONATA</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#introduction">Introduction</a></li>
+                <li class="submenu__item"><a href="#requirements">Software Requirements</a></li>
+                <li class="submenu__item"><a href="#usage">How to run the default tool</a></li>
+                <li class="submenu__item"><a href="#tutorial">Tutorial: Customize Sonata</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a href="sngnn1d.html">SNGNN1D</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#motivation">Motivation</a></li>
+                <li class="submenu__item"><a href="#scenes">Software Requirements</a></li>
+                <li class="submenu__item"><a href="#results">How to run the default tool</a></li>
+                <li class="submenu__item"><a href="#references">References</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a href="sngnn1dv2.html">SNGNN1D-V2</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#motivation">Motivation</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a href="sngnn2d.html">SNGNN2D</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#motivation">Motivation and aims</a></li>
+                <li class="submenu__item"><a href="#howtest">How to try our model</a></li>
+                <li class="submenu__item"><a href="#dataset">Dataset generation</a></li>
+                <li class="submenu__item"><a href="#test">Testing the cost map with an A* planner</a></li>
+              </ul>
+            </li>
             <li class="main-menu__item--active"><a href="datasets.html">Datasets</a>
               <ul class="main-menu__submenu">
                 <li class="submenu__item"><a href="#socnav1">SocNav1</a></li>
@@ -38,110 +70,24 @@
         </nav>
       </aside>
       <main class="main-content">
-      
-      
-      
         <section class="main-section">
           <h2 class="main-section__title"><a name="socnav1">SocNav1</a></h2>
           <div class="main-section__content">
             <h3>A Dataset to Benchmark and Learn Social Navigation Conventions</h3>
-            <br/>
-            <p>Adapting to social conventions is an unavoidable requirement for the acceptance of assistive and social robots. While the scientific community broadly accepts that assistive robots and social robot companions are unlikely to have widespread use in the near future, their presence in health-care and other medium-sized institutions is becoming a reality. These robots will have a beneficial impact in industry and other fields such as health care. The growing number of research contributions to social navigation is also indicative of the importance of the topic.</p>
-            <br/>
-            <p>To foster the future prevalence of these robots, they must be useful, but also socially accepted. The first step to be able to actively ask for collaboration or permission is to estimate whether the robot would make people feel uncomfortable otherwise, and that is precisely the goal of algorithms evaluating social navigation compliance. Some approaches provide analytic models, whereas others use machine learning techniques such as neural networks. This data report presents and describes SocNav1, a dataset for social navigation conventions.</p>
-            <br/>
-            <p>The aims of SocNav1 are two-fold: a) enabling comparison of the algorithms that robots use to assess the convenience of their presence in a particular position when navigating; b) providing a sufficient amount of data so that modern machine learning algorithms such as deep neural networks can be used. Because of the structured nature of the data, SocNav1 is particularly well-suited to be used to benchmark non-Euclidean machine learning algorithms such as Graph Neural Networks. The dataset has been made available in a <a href="https://github.com/gnns4hri/SocNav1">public repository</a>. </p>
-
-            <img src="../../img/projects/sngnn1d/scenario_d.jpg" alt="screenshot of the SocNav1 tool" style="width: 640px" />
-
-            <br/>
+            <p>Adapting to social conventions is an unavoidable requirement for the acceptance of assistive and social robots. While the scientific community broadly accepts that assistive robots and social robot companions are unlikely to have widespread use in the near future, their presence in health-care and other medium-sized institutions is becoming a reality. These robots will have a beneficial impact in industry and other fields such as health care. The growing number of research contributions to social navigation is also indicative of the importance of the topic.</p></p>
+            <p>To foster the future prevalence of these robots, they must be useful, but also socially accepted. The first step to be able to actively ask for collaboration or permission is to estimate whether the robot would make people feel uncomfortable otherwise, and that is precisely the goal of algorithms evaluating social navigation compliance. Some approaches provide analytic models, whereas others use machine learning techniques such as neural networks. This data report presents and describes SocNav1, a dataset for social navigation conventions.</p></p>
+            <p>The aims of SocNav1 are two-fold: a) enabling comparison of the algorithms that robots use to assess the convenience of their presence in a particular position when navigating; b) providing a sufficient amount of data so that modern machine learning algorithms such as deep neural networks can be used. Because of the structured nature of the data, SocNav1 is particularly well-suited to be used to benchmark non-Euclidean machine learning algorithms such as Graph Neural Networks. The dataset has been made available in a <a href="https://github.com/gnns4hri/SocNav1">public repository</a>. </p></p><img src="../../img/projects/sngnn1d/scenario_d.jpg" alt="screenshot of the SocNav1 tool" style="width: 640px">
             <p>Contributors: Luis J. Manso, Pilar Bachiller, Pedro Núñez, Luis V. Calderita and Diego R. Faria.</p>
           </div>
         </section>
-
-
         <section class="main-section">
           <h2 class="main-section__title"><a name="socnav2">SocNav2</a></h2>
           <div class="main-section__content">
             <h3>An update to SocNav1 to use dynamic scenarios</h3>
-
           </div>
         </section>
-      
-      
-  
-      
-      
       </main>
     </div>
   </body>
   <script src="../../js/indexProjects.js"></script>
-  <script src="../../js/filters.js"></script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

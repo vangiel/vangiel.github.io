@@ -7,21 +7,24 @@
   box-shadow: 5px 0 10px 0 #333;
 
   header.main-header{
-    flex-basis: $headeHeigh;
-    position: relative;
-    z-index: 100;
+    flex-basis: $headerHeight;
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
 
   aside.main-aside{
     position: fixed;
     top: 0;
     bottom: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
+    z-index: 200;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 
     width: $asideWidth;
-    min-height: 100dvh;
-    padding-top: $headeHeigh;
+    padding-top: $headerHeight;
 
   }
   main.main-content{
@@ -34,7 +37,6 @@
 @media screen and (max-width: map-get($breakpoints, ml)), (orientation: landscape) and (max-width: map-get($breakpoints, ml)){
   .main-aside{
     left: -$asideWidth;
-    z-index: 200;
   }
   main.main-content{
     margin: 0 !important;
@@ -101,6 +103,8 @@ header.main-header{
   /* Menu styles */
   .main-nav{
     text-align: left;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     li{
       a{
@@ -133,6 +137,15 @@ header.main-header{
 
     .main-menu__item--active > a{
       background-color: darken($color1, 10%);
+      display: block;
+    }
+
+    .main-menu__item > ul{
+      display: none;
+    }
+
+    .main-menu__item--active > ul{
+      display: block;
     }
   }
 }

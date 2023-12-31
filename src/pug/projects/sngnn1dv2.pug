@@ -1,0 +1,15 @@
+extends ../templates/templateProjects
+block variables
+    - var title = 'Social Navigation with Graph Neural Networks 1D version 2'
+    - var rootPath = '../../'
+    - var pageName = 'sngnn1dv2'
+
+
+block sections
+    p <b>SNGNN</b> is a Graph Neural Network to model adherence to social-navigation conventions for robots. Given a particular scenario composed of a room with any number of walls, objects and people (who can be interacting with each other) the network provides a social adherence ratio from 0 to 1. This information can be used to plan paths for human-aware navigation.
+
+    a(href="https://github.com/robocomp/sngnn") GitHub repository.
+
+    section.main-section
+        h2.main-section__title: a(name="motivation") Motivation
+        .main-section__content

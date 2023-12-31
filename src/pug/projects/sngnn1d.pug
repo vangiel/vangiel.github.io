@@ -1,0 +1,182 @@
+extends ../templates/templateProjects
+block variables
+  - var title = 'Social Navigation with Graph Neural Networks 1D'
+  - var rootPath = '../../'
+  - var pageName = 'sngnn1d'
+
+block sections
+  p <b>SNGNN</b> is a Graph Neural Network to model adherence to social-navigation conventions for robots. Given a particular scenario composed of a room with any number of walls, objects and people (who can be interacting with each other) the network provides a social adherence ratio from 0 to 1. This information can be used to plan paths for human-aware navigation.
+
+  a(href="https://github.com/robocomp/sngnn") GitHub repository
+
+  section.main-section
+    h2.main-section__title: a(name="motivation") Motivation
+    .main-section__content
+      p
+      |As most researchers working on human-aware navigation, we used to handcraft the proxemics models our robots used for navigation. For instance, in our paper <em>"Socially Acceptable Robot Navigation over Groups of People"</em> (<a href="https://ieeexplore.ieee.org/document/8172454">link</a>) we used Gaussian Mixture Models to generate estimations of how irritating the presence of robots is in the different locations of any given environment (see <b>Fig. 1</b>).
+
+      figure
+        img(src=`${rootPath}img/projects/sngnn1d/GMMs.png` alt="gausian mixture models used in 2017" style="width: 400px;")
+        figcaption <b>Fig. 1:</b> Example of the use of Gaussian Mixture Models to model proxemics (2017).
+
+      p
+        |It worked quite well, but it had limitations regarding scalability with respect to the number of factors to consider. The models becoming slower was not the biggest of our problems. The complexity of the code, the number of bugs to deal with and the time necessary to develop these new features made the process hard and expensive. At some point we realised that following a (hybrid) data-driven approach would probably be a good idea, especially more cost-efficient than hand-engineering the models. Additionally, it would allow us to investigate into aspects which we did not consider because we were aware of their importance.
+
+
+
+  section.main-section
+    h2.main-section__title: a(name="scenes") What are the scenes composed of?
+    .main-section__content
+      p To choose the best ML model we have first to consider the nature of the data. Which are the main characteristics of the data usually considered in human-aware navigation?
+
+      ul
+        li Heterogeneous: many factors
+        li Variable number of people
+        li Variable environment (variable shaped and sized)
+        li Variable number of objects
+        li Variable number of interactions
+        li Variable number of <b>types of</b> interactions
+        li Indeterminately complex &amp; structured relationships
+
+      p Considering all this variability in the input data, and especially its size and highly structured nature, it would be quite difficult to handcraft good descriptors for the scenarios that could be used for regular fully-connected NNs. Convolutional Neural Networks or conventional Recurrent Networks did not seem to be a good match for the data either. Therefore we decided to use Graph Neural Networks (GNNs, <a href="https://arxiv.org/abs/1806.01261">reference</a>).
+
+      p Using GNNs for human-aware navigation allows us to improve accuracy of other ML algorithms (see references at the bottom) and improve scalability (how can we increase the number of variables to consider?) for different tasks. Some of these tasks are:
+
+      ul
+        li Model proxemics / inconvenience
+        li Predict people's movements
+        li Control robot's movements
+        li Detect &amp; predict behaviours/events
+
+      p We were able to obtain labels from 0 to 100 for 9280 randomly generated scenarios comprising scenarios with varying data as described in the previous paragraphs. The tool used to generate the data is shown in <b>Fig. 2</b>. Even though the results we obtained are good, we are aware of some limitations that will be addressed in future datasets: a) humans are static, b) there is only one type of interaction, c) we are told <em>"how people <b>think</b> they <b>would</b> feel"</em>, not how they actually felt in the situation.
+
+      p The mean squared error (<b>MSE</b>) achieved for the dataset is <b>0.03173</b>. Humans' MSE is 0.02929.
+
+      figure
+        img(src=`${rootPath}img/projects/sngnn1d/scenario_d.jpg` alt="screenshot of the SocNav1 tool" style="width: 640px")
+        figcaption <b>Fig. 2:</b> Example of the use of Gaussian Mixture Models to model proxemics (2017).
+
+  section.main-section
+    h2.main-section__title: a(name="results") Results
+    .main-section__content
+      p The following videos demonstrate the results obtained and showcase some of the properties of SNGNN.
+
+      h3 <b>Distance between two interacting people</b>
+
+      p In this video you can see how the distance between two <b>interacting</b> people affects the acceptance of the presence of a robot.
+
+      video(width="800" height="400" controls)
+        source(src=`${rootPath}videos/projects/sngnn1d/showcase_7_1.webm` type="video/webm")
+        |Your browser does not support the video tag.
+
+      h3 <b>Impact of walls</b>
+      p In this video you can see how the distance between a wall and a person affects the acceptance of the presence of a robot. Surprisingly, the difference is not very noticeable but it is in line with existing studies.
+
+      video(width="800" height="400" controls)
+        source(src=`${rootPath}videos/projects/sngnn1d/showcase_2_1.webm` type="video/webm")
+        |Your browser does not support the video tag.
+
+      h3 <b>Impact of incrementing the number of people in a room</b>
+      p This video showcases the ability of the network to adapt to an environment with a variable number of people. The response is as it would be expected: their spaces shrink as the density of people in the room increases. For example, people are way more relaxed about personal spaces in lifts than in open spaces.
+
+      video(width="800" height="400" controls)
+        source(src=`${rootPath}videos/projects/sngnn1d/showcase_3_3.webm` type="video/webm")
+        |Your browser does not support the video tag.
+
+      h3 <b>Angle when approaching interacting people</b>
+      p We can appreciate in this video that the network is able to tell that, if a robot has to cross two people who are interacting, it should do it perpendicular to the line of interaction (i.e., the value of the function is minimum when the angle is perpendicular).
+
+      video(width="800" height="400" controls)
+        source(src=`${rootPath}videos/projects/sngnn1d/showcase_5_1.webm` type="video/webm")
+        |Your browser does not support the video tag.
+
+      p This video shows a simulated environment where the robot is being <b>MANUALLY MOVED WITH A JOYSTICK</b>. Its purpose is to show the response of the network for the different positions and its stability.
+
+      video(width="800" height="400" controls)
+        source(src=`${rootPath}videos/projects/sngnn1d/sngnn.webm` type="video/webm")
+        |Your browser does not support the video tag.
+
+  section.main-section
+    h2.main-section__title: a(name="references") References
+    .main-section__content
+      p(style="text-align: left") <b>Social-Navigation Graph Neural Network:</b>
+
+      ul
+        li <b>Graph Neural Networks for Human-aware Social Navigation</b>. <em>L.J. Manso, R.R. Jorvekar, D.R. Faria, P. Bustos, P. Bachiller</em>. arXiv preprint arXiv:1909.09003. 2019.
+        li <b>SocNav1: A Dataset to Benchmark and Learn Social Navigation Conventions</b>. <em>L.J. Manso, P. Nunez, L.V. Calderita, D.R. Faria, P. Bachiller</em>. arXiv preprint arXiv:1909.02993. 2019.
+        li <b>Learning Human-Object Interactions by Graph Parsing Neural Networks</b>.<em>S. Qi, W. Wang, B. Jia, J. Shen, S.-C. Zhu</em>. arXiv:1808.07962. 2018.
+        li <b>Relational Graph Learning for Crowd Navigation</b>. <em>C. Chen, S. Hu, P. Nikdel, G. Mori, M. Savva</em>. arXiv preprint arXiv:1909.13165. 2019.
+
+      p( style="text-align: left") <b>Graph Neural Networks:</b>
+      ul
+        li <b>Semi-Supervised Classification with Graph Convolutional Networks</b>. <em>T.N. Kipf, M. Welling</em>. arXiv preprint arXiv:1609.02907. 2017.
+        li <b>Relational inductive biases, deep learning, and graph networks</b>. <em>P.W. Battaglia, J.B. Hamrick, V. Bapst, A. Sanchez-Gonzalez, V. Zambaldi, M. Malinowski, A. Tacchetti, D. Raposo, A. Santoro, R. Faulkner, C. Gulcehre, F. Song, A. Ballard, J. Gilmer, G. Dahl, A. Vaswani, K. Allen, C. Nash, V. Langston, C. Dyer, N. Heess, D. Wierstra, P. Kohli, M. Botvinick, O. Vinyals, Y. Li, R. Pascanu</em>. arXiv preprint arXiv:1806.01261. 2018.
+
+      p(style="text-align: left") <b>Slides: </b> &nbsp; <a href="https://ljmanso.com/perspectives/">https://ljmanso.com/perspectives/</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

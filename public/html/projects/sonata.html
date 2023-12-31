@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Daniel Rodriguez Criado - Research projects</title>
+    <title>SONATA - A Toolkit to Generate Social Navigation Datasets and HRI | Daniel Rodriguez-Criado</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- <link rel="icon" type="image/png" href="../img/favicon/rocket-solid.png"> -->
+    <link rel="icon" type="image/png" href="../../img/favicon/rocket-solid.png">
     <script src="https://kit.fontawesome.com/55d924b99d.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;0,900;1,300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/projects/projectStyles.css">
   </head>
   <body>
     <div class="global-container">
-      <input type="checkbox" id="menu-icon">
+      <input type="checkbox" autocomplete="off" id="menu-icon">
       <label for="menu-icon"><i class="fas fa-bars"></i></label>
       <header class="main-header">
-          <h1 class="main-header__title">My research projects page</h1>
+        <h1 class="main-header__title">SONATA - A Toolkit to Generate Social Navigation Datasets and HRI</h1>
       </header>
       <aside class="main-aside">
-          <h1 class="main-aside__title"><a href="../pages/research.html">Research projects</a></h1>
+        <h1 class="main-aside__title"><a href="../../html/pages/research.html">Research projects</a></h1>
         <div class="main-aside__nav-filter">
-          <input type="text" id="filter" onkeyup="myFilter()" placeholder="Search for projects...">
+          <input type="text" id="filter" placeholder="Search for projects...">
         </div>
         <nav class="main-nav">
           <ul class="main-menu" id="menu">
-              <li class="main-menu__item"><a href="traffic.html">Generation of traffic images</a></li>
-            <li class="main-menu__item--active"><a href="#">Sonata</a>
+            <li class="main-menu__item"><a href="traffic.html">Generation of traffic images</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#introduction">Introduction</a></li>
+                <li class="submenu__item"><a href="#results">Results</a></li>
+                <li class="submenu__item"><a href="#citation">Citation</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item--active"><a href="sonata.html">SONATA</a>
               <ul class="main-menu__submenu">
                 <li class="submenu__item"><a href="#introduction">Introduction</a></li>
                 <li class="submenu__item"><a href="#requirements">Software Requirements</a></li>
@@ -32,31 +39,45 @@
                 <li class="submenu__item"><a href="#tutorial">Tutorial: Customize Sonata</a></li>
               </ul>
             </li>
-            <li class="main-menu__item"><a href="sngnn1d.html">SNGNN1D</a></li>
-            <li class="main-menu__item"><a href="sngnn1dv2.html">SNGNN1D-V2</a></li>
-            <li class="main-menu__item"><a href="sngnn2d.html">SNGNN2D</a></li>
-            <li class="main-menu__item"><a href="datasets.html">Datasets</a></li>
+            <li class="main-menu__item"><a href="sngnn1d.html">SNGNN1D</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#motivation">Motivation</a></li>
+                <li class="submenu__item"><a href="#scenes">Software Requirements</a></li>
+                <li class="submenu__item"><a href="#results">How to run the default tool</a></li>
+                <li class="submenu__item"><a href="#references">References</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a href="sngnn1dv2.html">SNGNN1D-V2</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#motivation">Motivation</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a href="sngnn2d.html">SNGNN2D</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#motivation">Motivation and aims</a></li>
+                <li class="submenu__item"><a href="#howtest">How to try our model</a></li>
+                <li class="submenu__item"><a href="#dataset">Dataset generation</a></li>
+                <li class="submenu__item"><a href="#test">Testing the cost map with an A* planner</a></li>
+              </ul>
+            </li>
+            <li class="main-menu__item"><a href="datasets.html">Datasets</a>
+              <ul class="main-menu__submenu">
+                <li class="submenu__item"><a href="#socnav1">SocNav1</a></li>
+                <li class="submenu__item"><a href="#socnav2">SocNav2</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </aside>
       <main class="main-content">
-
-        <h1>Sonata</h1>  
-        <h2>A Toolkit to Generate Social Navigation Datasets and HRI</h2>
-
         <section class="main-section">
           <h2 class="main-section__title"><a name="introduction">Introduction</a></h2>
           <div class="main-section__content">
-
             <p>Social navigation datasets are necessary to assess social navigation algorithms and train machine learning algorithms. Most of the currently available datasets target pedestrians’ movements as a pattern to be replicated by robots. It can be argued that one of the main reasons for this to happen is that compiling datasets where real robots are manually controlled, as they would be expected to behave when moving,is a very resource intensive task. Another aspect that is often missing in datasets is symbolic information that could be relevant, such as human activities, relationships or interactions. Unfortunately, the available datasets targeting robots and supporting symbolic information are restricted to static scenes. Our approach argues that simulation can be used to gather social navigation data in an effective and cost-efficient way and presents a toolkit for this purpose. A use case studying the application of graph neural networks to create learned control policies using supervised learning is presented as an example of how it can be used.</p>
-
             <div class="videoWrapper">
               <iframe width="640" height="350" src="https://www.youtube.com/embed/i_kkKqTwbBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-
-            
             <p>The toolkit is used to generate the dataset by simulating the scenarios for robot's navigation in a social setting. We show an usecase of this data collected from the toolkit by converting into graphs and feeding it into the GNNs to predicts the robot's path in a given scene. The data collected from the toolkit comprises of the following for a given entity:</p>
-
             <ul>
               <li>Co-ordinates</li>
               <li>Velocity with respect to the robot</li>
@@ -64,93 +85,85 @@
               <li>Orientation</li>
               <li>Size</li>
             </ul>
-
             <p>The data is stored in the form of JSON files, with the following structure:</p>
-
-            <pre>
-              <code class="json">
-    "timestamp": 1598462029.7540903,
-      "walls": [
-        {
-            "x1": 5.64804220199585,
-            "x2": 4.9704155921936035,
-            "y1": 4.951876163482666,
-            "y2": -1.009736180305481
-        },
-        {
-            "x1": 4.970417499542236,
-            "x2": -0.991195559501648,
-            "y1": -1.0097349882125854,
-            "y2": -0.3321133852005005
-        },
-        {
-            "x1": -0.991193413734436,
-            "x2": -0.3135751187801361,
-            "y1": -0.332114040851593,
-            "y2": 5.629499435424805
-        },
-        {
-            "x1": -0.3135727047920227,
-            "x2": 5.648040294647217,
-            "y1": 5.629498481750488,
-            "y2": 4.951875686645508
-        }
-      ]
-    },
-    {
-        "command": [
-            -0.06999999843537807,
-            0,
-            0.25999999046325684
-        ],
-        "goal": [
-            {
-                "x": 0.9240278005599976,
-                "y": 3.107682704925537
-            }
-        ],
-        "interaction": [
-            {
-                "dst": 2,
-                "relation": "human_laptop_interaction",
-                "src": 1
-            }
-        ],
-        "objects": [
-            {
-                "a": 0.11155806481838226,
-                "id": 2,
-                "size_x": 0.8999996185302734,
-                "size_y": 0.800000011920929,
-                "va": 0.0016205161809921265,
-                "vx": 0.006066322326660156,
-                "vy": -0.005913734436035156,
-                "x": 3.3170711994171143,
-                "y": 3.743642807006836
-            }
-        ],
-        "people": [
-            {
-                "a": -1.458441972732544,
-                "id": 1,
-                "va": 0.0016202926635742188,
-                "vx": -1.5497207641601562e-05,
-                "vy": -0.005223274230957031,
-                "x": 2.8968095779418945,
-                "y": -0.007299661636352539
-            }
-        ]
-              </code>
-            </pre>
-
+            <pre><code class="json">"timestamp": 1598462029.7540903,
+ "walls": [
+   {
+       "x1": 5.64804220199585,
+       "x2": 4.9704155921936035,
+       "y1": 4.951876163482666,
+       "y2": -1.009736180305481
+   },
+   {
+       "x1": 4.970417499542236,
+       "x2": -0.991195559501648,
+       "y1": -1.0097349882125854,
+       "y2": -0.3321133852005005
+   },
+   {
+       "x1": -0.991193413734436,
+       "x2": -0.3135751187801361,
+       "y1": -0.332114040851593,
+       "y2": 5.629499435424805
+   },
+   {
+       "x1": -0.3135727047920227,
+       "x2": 5.648040294647217,
+       "y1": 5.629498481750488,
+       "y2": 4.951875686645508
+   }
+ ]
+},
+{
+   "command": [
+       -0.06999999843537807,
+       0,
+       0.25999999046325684
+   ],
+   "goal": [
+       {
+           "x": 0.9240278005599976,
+           "y": 3.107682704925537
+       }
+   ],
+   "interaction": [
+       {
+           "dst": 2,
+           "relation": "human_laptop_interaction",
+           "src": 1
+       }
+   ],
+   "objects": [
+       {
+           "a": 0.11155806481838226,
+           "id": 2,
+           "size_x": 0.8999996185302734,
+           "size_y": 0.800000011920929,
+           "va": 0.0016205161809921265,
+           "vx": 0.006066322326660156,
+           "vy": -0.005913734436035156,
+           "x": 3.3170711994171143,
+           "y": 3.743642807006836
+       }
+   ],
+   "people": [
+       {
+           "a": -1.458441972732544,
+           "id": 1,
+           "va": 0.0016202926635742188,
+           "vx": -1.5497207641601562e-05,
+           "vy": -0.005223274230957031,
+           "x": 2.8968095779418945,
+           "y": -0.007299661636352539
+       }
+   ]</code></pre>
           </div>
         </section>
-
         <section class="main-section">
           <h2 class="main-section__title"><a name="requirements">Software Requirements</a></h2>
           <div class="main-section__content">
             <ol>
-              <li> PyTorch <a href="https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/"> https://pytorch.org/get-started/locally/</a></li>
+              <li>PyTorch <a href="https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/"> https://pytorch.org/get-started/locally/</a></li>
               <li> DGL <a href="https://www.dgl.ai/pages/start.html">https://www.dgl.ai/pages/start.html</a></li>
               <li>PyTorch Geometric <a href="https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html">https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html</a></li>
               <li> PyRep <a href="https://github.com/stepjam/PyRep">https://github.com/stepjam/PyRep</a> (This link would also help in the installation of CoppeliaSim)</li>
@@ -158,121 +171,86 @@
             </ol>
           </div>
         </section>
-
         <section class="main-section">
           <h2 class="main-section__title"><a name="usage">How to run the default tool</a></h2>
           <div class="main-section__content">
-            <p>After cloning the directory, execute the following commands:
+            <p>After cloning the directory, execute the following commands:</p>
             <ol>
               <li>Shift the interfaces to proper location.</li>
               <pre>
-                <kdb>
-    cp interfaces/* /opt/robocomp/interfaces
-    cp interfaces/* /opt/robocomp/interfaces/IDSLs
-                </kdb>
-              </pre>
+cp interfaces/* /opt/robocomp/interfaces
+cp interfaces/* /opt/robocomp/interfaces/IDSLs</pre>
               <li>Run the tool.</li>
               <pre>
-                <kdb>
-    bash run.sh
-                </kdb>
-              </pre>
+bash run.sh</pre>
             </ol>
-            </p>
-            
             <p>After you run the above commands the SONATA GUI opens up.</p>
-
-            <ul>
-              <li>Write the contributor's(user's) name so that the data saved can be marked by the users name.</li>
-              <img src="../../img/projects/sonata/get_contributer.png">
-
-              <li>After this the simulation will start with a green tint, and until the mouse controller is clicked robot will not move. </li>
-              <img src="../../img/projects/sonata/simulation_green_start.png" width="570" height="350">
-
-              <li>Select the configuration from the top bar of the SONATA GUI to select the range of different entities you want to add in the scene. You can also regenerate a scene if you don't like the settings of entities by using the regenerate button from the top bar. We also provided blue lines between two entities to show that they are interacting with each other.</li>
-              <img src="../../img/projects/sonata/select_range.png" width="250" height="400">
-
-              <li>click on the mouse controller and hold the left key and drag the mouse to move the robot in that direction.</li>
-              <img src="../../img/projects/sonata/click_joystick.png" width="300" height="300">
-
-              <li>Move the robot to the goal marked by the cone.</li>
-              <img src="../../img/projects/sonata/reach_goal.png" width="570" height="350">
-
-              <li>Save your data.</li>
-              <img src="../../img/projects/sonata/save.png" width="570" height="350">
-            </ul>
-
+            <ol>
+              <li>Write the contributor's(user's) name so that the data saved can be marked by the users name.</li><img src="../../img/projects/sonata/get_contributer.png">
+              <li>After this the simulation will start with a green tint, and until the mouse controller is clicked robot will not move.</li><img src="../../img/projects/sonata/simulation_green_start.png" width="570" height="350">
+              <li>Select the configuration from the top bar of the SONATA GUI to select the range of different entities you want to add in the scene. You can also regenerate a scene if you don't like the settings of entities by using the regenerate button from the top bar. We also provided blue lines between two entities to show that they are interacting with each other.</li><img src="../../img/projects/sonata/select_range.png" width="250" height="400">
+              <li>click on the mouse controller and hold the left key and drag the mouse to move the robot in that direction.</li><img src="../../img/projects/sonata/click_joystick.png" width="300" height="300">
+              <li>Move the robot to the goal marked by the cone.</li><img src="../../img/projects/sonata/reach_goal.png" width="570" height="350">
+              <li>Save your data.</li><img src="../../img/projects/sonata/save.png" width="570" height="350">
+            </ol>
             <p>After you click and save the data, a JSON file is generated and the full episode gets saved with timestamps. For the usecase we take these JSONs and convert them into graphs using socnavData data loader, which is then fed into the GNNs. Once the model is trained you can run the toolkit in test mode by setting TEST_MODE boolean to true in the controller's specificworker.py file.</p>
-
           </div>
         </section>
-
         <section class="main-section">
           <h2 class="main-section__title"><a name="tutorial">Tutorial: Customize SONATA</a></h2>
           <div class="main-section__content">
-            <h1>Where to change/add code in the repository</h1>
-
+            <h3>Where to change/add code in the repository</h3>
             <p>SONATA's main components are the Controller, Joystick, and Simulator. All the changes that needs to be done are in the <i>src/specificworker.py</i> file of these components. For adding/changing a new objects in the scene, <i>python/coppeliasimapi2.py</i> needs to be modified, for interacting or controlling the behavior of these objects you can make changes in <i>python/sonata.py</i> module.</p>
-
-            <h1>Add a new object to the scene</h1>
-
+            <h3>Add a new object to the scene</h3>
             <p>Let's assume you want to add more than one goal in the scene, for that you need to make another goal object in <i>python/coppeliasimapi2.py</i>.</p>
-            <pre>
-              <code class="json">
-
+            <pre><code class="json">
 class NewGoal(object):
-    def __init__(self, x, y):
-        super(NewGoal, self).__init__()
-        ss1 = Shape.create(type=PrimitiveShape.CONE, 
-                              color=[1,0,0], size=[0.4, 0.4, 0.75],
-                              position=[x, y, 2.5],orientation=[3.14,0,3.14])
-        ss1.set_color([1, 0, 0])
-        ss1.set_position([x, y, 1.5])
-        ss1.set_orientation([3.14,0,3.14])        
-        ss1.set_dynamic(False)
+   def __init__(self, x, y):
+       super(NewGoal, self).__init__()
+       ss1 = Shape.create(type=PrimitiveShape.CONE,
+                             color=[1,0,0], size=[0.4, 0.4, 0.75],
+                             position=[x, y, 2.5],orientation=[3.14,0,3.14])
+       ss1.set_color([1, 0, 0])
+       ss1.set_position([x, y, 1.5])
+       ss1.set_orientation([3.14,0,3.14])
+       ss1.set_dynamic(False)
 
-        self.handle_add = ss1
+       self.handle_add = ss1
 
-        ss2 = Shape.create(type=PrimitiveShape.CONE, 
-                              color=[0,1,0], size=[0.75, 0.75, 0.0015],
-                              position=[x, y, 0.000],orientation=[3.14,0,3.14])
-        ss2.set_color([0, 1, 0])
-        ss2.set_position([x, y, 0.000])
-        ss2.set_orientation([3.14,0,3.14])        
-        ss2.set_dynamic(False)
-        self.handle = ss2
-        self.handle.set_model(True)
+       ss2 = Shape.create(type=PrimitiveShape.CONE,
+                             color=[0,1,0], size=[0.75, 0.75, 0.0015],
+                             position=[x, y, 0.000],orientation=[3.14,0,3.14])
+       ss2.set_color([0, 1, 0])
+       ss2.set_position([x, y, 0.000])
+       ss2.set_orientation([3.14,0,3.14])
+       ss2.set_dynamic(False)
+       self.handle = ss2
+       self.handle.set_model(True)
 
-    def get_position(self, relative_to=None):
-        return self.handle.get_position(relative_to=relative_to)
+   def get_position(self, relative_to=None):
+       return self.handle.get_position(relative_to=relative_to)
 
-    def get_orientation(self, relative_to=None):
-        return self.handle.get_orientation(relative_to=relative_to)
+   def get_orientation(self, relative_to=None):
+       return self.handle.get_orientation(relative_to=relative_to)
 
-    def get_handle(self):
-        return self.handle._handle
+   def get_handle(self):
+       return self.handle._handle
 
-    def remove(self):
-        self.handle.remove()
-        self.handle_add.remove()
+   def remove(self):
+       self.handle.remove()
+       self.handle_add.remove()
 
-    def check_collision(self, obj):
-        return self.handle.check_collision(obj)
+   def check_collision(self, obj):
+       return self.handle.check_collision(obj)
 
-    def get_model_bounding_box(self):
-        return self.handle.get_model_bounding_box()
-
-              </code>
-            </pre>
-          
+   def get_model_bounding_box(self):
+       return self.handle.get_model_bounding_box()
+</code></pre>
             <p>After this you need to call this <i>NewGoal()</i> object in the <i>python/sonata.py</i> module in <i>def room_setup()</i>.</p>
-
           </div>
         </section>
-      
       </main>
     </div>
   </body>
   <script src="../../js/indexProjects.js"></script>
-  <script src="../../js/filters.js"></script>
 </html>

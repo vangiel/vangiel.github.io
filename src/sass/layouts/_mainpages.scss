@@ -15,8 +15,8 @@
             padding: .75em;
             background-color: lighten($complement, 15%);
             position: sticky;
-            top: .2em;
-            z-index: 100;
+            top: $headerHeight 1.3em;
+            z-index: 5;
             &:hover{
                 background-color: $complement;
             }
