@@ -191,6 +191,7 @@ export default class publications {
             let btn = pub.querySelector(".pubcollapse");
 
             btn.addEventListener("click", function () {
+                event.preventDefault();
                 let panel = pub.children[1] as HTMLElement;
                 if (panel.style.maxHeight) {
                     panel.style.maxHeight = null;
