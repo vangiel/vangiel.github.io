@@ -1,11 +1,14 @@
 import {addMenuEventListener} from './modules/checkboxMenu'
-import Publications from "./modules/publications";
+import publications from "./modules/publications";
 
 addMenuEventListener("#menu-icon")
 
-if(window.location.href.split("/").pop() === "publications.html"){
-    let pubManager: Publications = new Publications('../../publications.json')
+let page_path: string = window.location.href
 
-    pubManager.pubJSON()
+if(page_path.split("/").pop() === "publications.html"){
+    let pubManager: publications = new publications('../../publications.json')
+    await pubManager.getJSON();
+    pubManager.printHTML();
+    pubManager.collapseBtn();
 }
 
