@@ -23,10 +23,11 @@
 
       h1{
         text-transform: uppercase;
+        text-shadow: #9cfffc 5px 2px 5px;
         font-family: 'Anton', sans-serif;
         letter-spacing: 3px;
         margin: 5px 0;
-        color: $color1;
+        color: darken($color1, 10);
         font-size: 3em;
         font-weight: bold;
       }
@@ -37,9 +38,10 @@
         font-weight: bold;
         text-align: justify;
         text-justify: inter-word;
+        padding-right: 5em;
 
         a{
-          color: $color1;
+          color: lighten($color1, 20);
         }
       }
     }

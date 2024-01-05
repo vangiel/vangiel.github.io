@@ -371,7 +371,7 @@ a {
 }
 /* Main header styles*/
 header.main-header {
-  background: #709F17;
+  background: #006965;
 }
 header.main-header h1 {
   color: white;
@@ -392,7 +392,7 @@ header.main-header h1 {
 
 /* Main aside styles */
 .main-aside {
-  background-color: #2B303B;
+  background-color: #505762;
   color: white;
   text-align: center;
   transition: 0.4s left ease-in-out;
@@ -411,8 +411,8 @@ header.main-header h1 {
 }
 .main-aside__nav-filter input {
   border-radius: 0;
-  background-color: #788195;
-  color: white;
+  background-color: #f7fee8;
+  color: black;
   width: 80%;
   margin-bottom: 2em;
   padding: 8px;
@@ -428,7 +428,7 @@ header.main-header h1 {
   color: white;
 }
 .main-aside .main-nav li a:hover {
-  background-color: #628a14;
+  background-color: #006966;
 }
 .main-aside .main-nav .main-menu > li > a {
   font-size: 1.5em;
@@ -443,7 +443,7 @@ header.main-header h1 {
   padding: 0.3em 1.5em 0.3em 2.3em;
 }
 .main-aside .main-nav .main-menu__item--active > a {
-  background-color: #628a14;
+  background-color: #006966;
   display: block;
 }
 .main-aside .main-nav .main-menu__item > ul {
@@ -465,13 +465,13 @@ header.main-header h1 {
 .main-content .main-section__title {
   margin: 10px 0;
   padding: 0.75em;
-  background-color: #4b5467;
+  background-color: #727c8c;
   position: sticky;
   top: 4.5rem 1.3em;
   z-index: 5;
 }
 .main-content .main-section__title:hover {
-  background-color: #2B303B;
+  background-color: #505762;
 }
 .main-content .main-section__title a {
   color: white;
@@ -561,7 +561,7 @@ label {
   top: 25px;
   left: 25px;
   z-index: 400;
-  background-color: #a7aebf;
+  background-color: #d5d8dc;
   padding: 5px 10px;
   border-radius: 3px;
   display: none;
@@ -583,20 +583,20 @@ label {
     margin: 1em 0;
   }
   input#menu-icon:checked + label i.fas {
-    color: #8993a9;
+    color: #b9bec5;
   }
 }
 @media screen and (max-width: 740px) {
   input#menu-icon:checked ~ .main-aside {
     left: 0;
     width: 100vw;
-    background-color: rgba(43, 48, 59, 0.95);
+    background-color: rgba(80, 87, 98, 0.95);
   }
   input#menu-icon:checked ~ .main-content {
     margin: 0;
   }
   input#menu-icon:checked + label i.fas {
-    color: #8993a9;
+    color: #b9bec5;
   }
 }
 [class$=__bibtex] {

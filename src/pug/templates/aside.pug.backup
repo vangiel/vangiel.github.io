@@ -1,13 +1,13 @@
 header.aside-header
   .aside-header__img-container
-    img(src=`${rootPath}img/logo.svg`, alt="Logo of Daniel webpage")#profile-image
+    img(src=`${rootPath}img/daniel.jpg`, alt="Daniel")#profile-image
   .aside-header__content
     h2.aside-header__content__name Daniel Rodriguez-Criado
     h3.aside-header__content__major PhD in Computer Science
     h3.aside-header__content__location 
-      | and Deep Learning
+      | #[i.fas.fa-location-arrow] Aston University, UK
     h3.aside-header__content__email
-      | #[i.fas.fa-envelope] dani1610@hotmail.com
+      | #[i.fas.fa-envelope] 190229717@aston.ac.uk
   hr.aside-header__hr
 
 nav.aside-menu

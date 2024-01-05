@@ -46,7 +46,7 @@
 /* Main header styles*/
 
 header.main-header{
-  background: $color2;
+  background: darken($color2, 20);
 
   h1{
     color: white;
@@ -91,7 +91,7 @@ header.main-header{
     input{
       border-radius: 0;
       background-color: $colorText1;
-      color: white;
+      color: black;
       width: 80%;
 
       margin-bottom: 2em;

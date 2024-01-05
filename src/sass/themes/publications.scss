@@ -18,9 +18,15 @@ $imgCoverPath: "../img/publications/cover.jpg";
     }
 
     .pubmain{
+        margin: auto;
         position: relative;
-        padding: 1em;
+        padding-top: 1em;
         padding-bottom: 2.6em;
+
+        @media  screen and (min-width: map-get($breakpoints, ml)){
+            margin-inline: 5em;
+        }
+
         &__title{
             margin-bottom: 1em;
         }
@@ -59,7 +65,7 @@ $imgCoverPath: "../img/publications/cover.jpg";
             bottom: 0;
             display: flex;
 
-            background-color: lighten($color1, 50%);
+            background-color: darken($color1, 10);
 
             &::before{
                 content: "";
@@ -80,7 +86,7 @@ $imgCoverPath: "../img/publications/cover.jpg";
                 width: 2.5rem;
 
                 font-size: 20px;
-                color: lighten($color: $complement, $amount: 15%);
+                color: lighten($color: $complement, $amount: 50%);
 
                 &:hover{
                     background-color: $color1;
@@ -101,6 +107,10 @@ $imgCoverPath: "../img/publications/cover.jpg";
         overflow: hidden;
         transition: max-height 0.3s ease-out;
         box-shadow: 0 -2px 0 0 $color1;
+
+        @media  screen and (min-width: map-get($breakpoints, ml)){
+            margin-inline: 5em;
+        }
 
         .wrapper{     
             padding: 2em;
