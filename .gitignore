@@ -32,3 +32,12 @@ pnpm-debug.log*
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# packages
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# .vs folder
+.vs/
+.idea

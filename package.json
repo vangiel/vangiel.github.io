@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "personal-website",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,7 +11,22 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
-    "astro": "^4.0.8",
+    "@fontsource/oleo-script": "^5.0.8",
+    "@fontsource/roboto": "^5.0.8",
+    "astro": "^4.0.8"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^0.31.4",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "lightningcss": "^1.24.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.3.3"
   }
 }
