@@ -1,0 +1,43 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+	pageActive: string;
+}
+
+const {pageActive} = Astro.props;
+---
+<header class="main-header">
+    <img class="header__logo" src="img/logo.svg" alt="Daniel Rodriguez's logo">
+    <ThemeToggle />
+    <nav class="main-nav">
+        <ul role="menubar">
+            <li role="none"><a href="/">Home</a></li>
+            <li role="none"><a href="/projects/">Projects</a></li>
+            <li role="none"><a href="/publications/">Publications</a></li>
+            <li role="none"><a href="/blog/">News</a></li>
+            <li role="none"><a href="/contact-me/">Contact me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<style>
+    .main-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+        background: var(--clr-background);
+        color: var(--clr-text);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .main-nav > ul{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
