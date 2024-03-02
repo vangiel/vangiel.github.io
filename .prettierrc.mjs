@@ -10,7 +10,7 @@ export default {
 	useTabs: true,
 	endOfLine: "lf",
 	arrowParens: "always",
-	plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+	plugins: ["prettier-plugin-astro"],
 	overrides: [
 		{
 			files: ["*.json", "*.md", "*.toml", "*.yml"],

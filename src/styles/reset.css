@@ -1,74 +1,74 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  font: inherit;
+	margin: 0;
+	padding: 0;
+	font: inherit;
 }
 
 ::-moz-selection {
-  background-color: #b3d4fc;
-  color: #000000;
-  text-shadow: none;
+	background-color: #b3d4fc;
+	color: #000000;
+	text-shadow: none;
 }
 
 ::selection {
-  background-color: #b3d4fc;
-  color: #000000;
-  text-shadow: none;
+	background-color: #b3d4fc;
+	color: #000000;
+	text-shadow: none;
 }
 
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  height: 100%;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	height: 100%;
 }
 
 html,
 body {
-  min-height: 100%;
+	min-height: 100%;
 }
 
 ul,
 ol {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  color: inherit;
-  display: inline-block;
-  text-decoration: none;
+	color: inherit;
+	display: inline-block;
+	text-decoration: none;
 }
 
 svg {
-  display: inline-block;
-  max-width: 100%;
+	display: inline-block;
+	max-width: 100%;
 }
 
 img,
 picture,
 video,
 canvas {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 button {
-  cursor: pointer;
-  border-radius: 0;
-  border: none;
-  background-color: transparent;
+	cursor: pointer;
+	border-radius: 0;
+	border: none;
+	background-color: transparent;
 }
 
 input,
 textarea,
 select {
-  color: inherit;
-  letter-spacing: inherit;
+	color: inherit;
+	letter-spacing: inherit;
 }
 
 h1,
@@ -77,18 +77,18 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
-  text-wrap: balance;
+	overflow-wrap: break-word;
+	text-wrap: balance;
 }
 
-p{
-    overflow-wrap: break-word;
-    text-wrap: pretty;
+p {
+	overflow-wrap: break-word;
+	text-wrap: pretty;
 }
 
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeSpeed;
-  font-size: 1.6rem;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeSpeed;
+	font-size: 1.6rem;
 }

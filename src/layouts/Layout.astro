@@ -1,21 +1,25 @@
 ---
-import '@/styles/reset.css';
-import '@fontsource/roboto';
-import '@fontsource/oleo-script';
-import NavAside from '@/components/NavHeader.astro';
+import NavHeader from "@/components/NavHeader.astro"
+import "@/styles/base_colors.css"
+import "@/styles/reset.css"
+import "@fontsource/oleo-script"
+import "@fontsource/roboto"
 
 interface Props {
-	title: string;
+	title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="This is the Daniel Rodriguez Criado's personal website and protfolio" />
+		<meta
+			name="description"
+			content="This is the Daniel Rodriguez Criado's personal website and protfolio"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2" />
 		<meta name="color-schmeme" content="light dark" />
@@ -23,75 +27,42 @@ const { title } = Astro.props;
 		<title>Daniel Rodriguez | {title}</title>
 	</head>
 	<body>
-		<NavAside pageActive={title} />
+		<NavHeader pageActive={title} />
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
-		/* Base colours definition */
-		--clr-light: oklch(98.42% 0.003 247.86);
-		
-		--clr-purple-100: oklch(97% 0.021 313.23);
-		--clr-purple-200: oklch(89% 0.051 313.23);
-		--clr-purple-300: oklch(80% 0.123 313.23);
-		--clr-purple-400: oklch(71% 0.182 313.23);
-		--clr-purple-500: oklch(60% 0.257 313.23);
-		--clr-purple-600: oklch(49% 0.182 313.23);
-		--clr-purple-700: oklch(38% 0.123 313.23);
-		--clr-purple-800: oklch(25% 0.051 313.23);
-		--clr-purple-900: oklch(12% 0.021 313.23);
-
-		--clr-yellow-100: oklch(97% 0.021 70.86);
-		--clr-yellow-200: oklch(89% 0.051 70.86);
-		--clr-yellow-300: oklch(80% 0.123 70.86);
-		--clr-yellow-400: oklch(71% 0.182 70.86);
-		--clr-yellow-500: oklch(60% 0.257 70.86);
-		--clr-yellow-600: oklch(49% 0.182 70.86);
-		--clr-yellow-700: oklch(38% 0.123 70.86);
-		--clr-yellow-800: oklch(25% 0.051 70.86);
-		--clr-yellow-900: oklch(12% 0.021 70.86);
-
-		--clr-neutral-100: oklch(97% 0.021 253.72);
-		--clr-neutral-200: oklch(89% 0.051 253.72);
-		--clr-neutral-300: oklch(80% 0.123 253.72);
-		--clr-neutral-400: oklch(71% 0.182 253.72);
-		--clr-neutral-500: oklch(60% 0.257 253.72);
-		--clr-neutral-600: oklch(49% 0.182 253.72);
-		--clr-neutral-700: oklch(38% 0.123 253.72);
-		--clr-neutral-800: 25% 0.051 253.72;
-		--clr-neutral-900: oklch(12% 0.021 253.72);
-
-
 		/* Light mode */
 		&[data-theme="☀️"] {
 			color-scheme: light;
 			--clr-background: var(--clr-light);
 
-			--clr-text: oklch(var(--clr-neutral-800));
+			--clr-text: var(--clr-neutral-800);
 			--clr-text-invert: var(--clr-light);
 
 			--clr-primary: var(--clr-yellow-500);
 			--clr-secondary: var(--clr-neutral-500);
-			--clr-accent: var(--clr-purple-500);
+			--clr-accent: var(--clr-purple-300);
 
-			--img-bg-home: url('img/home/light_bg.jpg');
+			--img-bg-home: "img/home/light_bg.jpg";
 		}
 
 		/* Dark mode */
 		&[data-theme="🌑"] {
 			color-scheme: dark;
-			--clr-background: oklch(var(--clr-neutral-800));
+			--clr-background: var(--clr-neutral-800);
 
 			--clr-text: var(--clr-light);
-			--clr-text-invert: oklch(var(--clr-neutral-800));
+			--clr-text-invert: var(--clr-neutral-800);
 
-			--clr-primary: var(--clr-yellow-500);
+			--clr-primary: var(--clr-yellow-300);
 			--clr-secondary: var(--clr-neutral-500);
 			--clr-accent: var(--clr-purple-500);
 
-			--img-bg-home: url('img/home/dark_bg.jpg');
-		} 
+			--img-bg-home: "img/home/dark_bg.jpg";
+		}
 
 		/* Font families */
 		--ff-base: "roboto", system-ui, sans-serif;
@@ -108,33 +79,20 @@ const { title } = Astro.props;
 		--fs-500: 1.375rem;
 		--fs-600: 1.75rem;
 		--fs-700: 2.25rem;
-	}
 
-	.dark{
-		--clr-background: oklch(var(--clr-neutral-800));
-
-		--clr-text: var(--clr-light);
-		--clr-text-invert: var(--clr-neutral-800);
-
-		--clr-primary: var(--clr-yellow-500);
-		--clr-secondary: var(--clr-neutral-500);
-		--clr-accent: var(--clr-purple-500);
-
-		--img-bg-home: url('img/home/dark_bg.jpg');
+		/* Global sizes  */
+		--min-main-width: 60ch;
 	}
 
 	html {
 		color-scheme: dark light;
-		color: var(--clr-text);
-		font-family: var(--ff-base);
-		background-color: var(--clr-background);
-		
+		color: oklch(var(--clr-text));
+		font-family: oklch(var(--ff-base));
+		background-color: oklch(var(--clr-background));
+
 		@media screen and (prefers-reduced-motion: no-preference) {
-			&{
-				scroll-behavior: smooth;
-			}
+			scroll-behavior: smooth;
 		}
-		
 	}
 
 	/* Utility classes: */
@@ -149,8 +107,8 @@ const { title } = Astro.props;
 	}
 
 	.wrapper {
-		--max-width: 55rem;
-		width: min(100% - 2rem, var(--max-width, 70ch));
+		/* width: min(100% - 2rem, var(--max-width, 70ch)); */
+		max-width: var(--min-main-width, 70ch);
 		margin-inline: auto;
 	}
 </style>

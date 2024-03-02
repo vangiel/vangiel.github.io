@@ -1,43 +1,168 @@
 ---
-import ThemeToggle from './ThemeToggle.astro';
+import ThemeToggle from "./ThemeToggle.astro"
+import Hamburger from "@/icons/hamburger.astro"
 
 interface Props {
-	pageActive: string;
+	pageActive: string
 }
 
-const {pageActive} = Astro.props;
+const { pageActive } = Astro.props
 ---
-<header class="main-header">
-    <img class="header__logo" src="img/logo.svg" alt="Daniel Rodriguez's logo">
-    <ThemeToggle />
-    <nav class="main-nav">
-        <ul role="menubar">
-            <li role="none"><a href="/">Home</a></li>
-            <li role="none"><a href="/projects/">Projects</a></li>
-            <li role="none"><a href="/publications/">Publications</a></li>
-            <li role="none"><a href="/blog/">News</a></li>
-            <li role="none"><a href="/contact-me/">Contact me</a></li>
-        </ul>
-    </nav>
-</header>
+
+<input type="checkbox" name="menu-toggle" id="menu-toggle" />
+<label for="menu-toggle" class="hamburger">
+	<Hamburger />
+</label>
+
+<div class="nav-container">
+	<div class="logo-theme">
+		<a href="/"><img class="logo__img" src="../img/logo.svg" alt="Daniel Rodriguez's logo" /></a>
+		<ThemeToggle />
+	</div>
+	<nav id="main-nav">
+		<ul role="menubar">
+			<li role="none">
+				<a class:list={["menu-item", { active: pageActive === "Home" }]} href="/">Home</a>
+			</li>
+			<li role="none">
+				<a class:list={["menu-item", { active: pageActive === "Projects" }]} href="/projects/"
+					>Projects</a
+				>
+			</li>
+			<li role="none">
+				<a
+					class:list={["menu-item", { active: pageActive === "Publications" }]}
+					href="/publications/">Publications</a
+				>
+			</li>
+			<li role="none">
+				<a class:list={["menu-item", { active: pageActive === "Blog" }]} href="/blog/">News</a>
+			</li>
+			<li role="none">
+				<a class:list={["menu-item", { active: pageActive === "Contact me" }]} href="/contact-me/"
+					>Contact me</a
+				>
+			</li>
+		</ul>
+	</nav>
+</div>
 
 <style>
-    .main-header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1.5rem 2rem;
-        background: var(--clr-background);
-        color: var(--clr-text);
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
+	#menu-toggle {
+		display: none;
+	}
 
-    .main-nav > ul{
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        justify-content: center;
-    }
+	.nav-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		height: 8rem;
+		padding-inline: min(1rem, 2vw);
+
+		position: sticky;
+		top: 0;
+		z-index: 10;
+
+		.logo-theme {
+			display: flex;
+			align-items: center;
+			flex-shrink: 0;
+			gap: 2rem;
+
+			.logo__img {
+				width: 5rem;
+				aspect-ratio: 1;
+			}
+		}
+	}
+
+	#main-nav > ul {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		justify-content: center;
+
+		a {
+			line-height: 3rem;
+			padding-inline: 1rem;
+			border-radius: 0.5rem;
+		}
+
+		.active,
+		a:hover,
+		a:focus {
+			background: oklch(var(--clr-accent));
+		}
+	}
+
+	.hamburger {
+		position: absolute;
+		top: 1.2em;
+		left: 1.2em;
+		z-index: 20;
+		display: none;
+	}
+
+	@media only screen and (max-width: 650px) {
+		.hamburger {
+			display: block;
+		}
+
+		.nav-container {
+			display: none;
+		}
+
+		#menu-toggle:checked ~ .nav-container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background-color: oklch(var(--clr-text) / 0.5);
+
+			#main-nav > ul {
+				flex-direction: column;
+				gap: 2rem;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.logo-theme {
+				flex-direction: column;
+				align-items: center;
+				flex-shrink: 0;
+				gap: 2rem;
+
+				.logo__img {
+					width: 10rem;
+					aspect-ratio: 1;
+				}
+			}
+		}
+	}
 </style>
+
+<script>
+	const menuItems = document.querySelectorAll(".menu-item")
+	const activeElement = document.querySelector(".active")
+	const mainNav = document.querySelector("#main-nav")
+
+	menuItems.forEach((element) => {
+		element.addEventListener("mouseover", () => {
+			menuItems.forEach((item) => {
+				if (item.classList.contains("active")) {
+					item.classList.remove("active")
+				}
+			})
+		})
+	})
+
+	if (mainNav != null) {
+		mainNav.addEventListener("mouseleave", () => {
+			if (activeElement != null) {
+				activeElement.classList.add("active")
+			}
+		})
+	}
+</script>
