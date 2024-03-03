@@ -15,13 +15,7 @@
   "files.associations": {
     "*.svg": "html"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "astro", "typescript", "typescriptreact"],
   "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
@@ -31,7 +25,7 @@
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.documentSelectors": [
-    "**/*.astro"
-  ]
+  "prettier.documentSelectors": ["**/*.astro"],
+  "prettier.trailingComma": "all",
+  "prettier.requireConfig": true
 }

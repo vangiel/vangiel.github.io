@@ -1,0 +1,44 @@
+---
+
+---
+
+<header>
+	<section class="hero-section">
+		<div class="hero__text">
+			<h1>Hey I'm Daniel Rodriguez Criado</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto alias cupiditate
+				autem ipsum, eveniet ipsa a! Aperiam culpa sunt unde dignissimos, veritatis delectus error
+				similique nemo velit. Iusto, excepturi?
+			</p>
+		</div>
+		<div class="hero__image"></div>
+	</section>
+</header>
+
+<style>
+	header {
+		min-height: 100dvh;
+		padding-block-start: 8rem;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-image: linear-gradient(
+				to bottom,
+				oklch(var(--clr-background) / 0.9),
+				oklch(var(--clr-background) / 0.3)
+			),
+			var(--bg-img-home);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	.hero-section {
+		height: 20rem;
+		width: 50rem;
+	}
+</style>
