@@ -2,12 +2,16 @@
 import { Icon } from "astro-icon/components";
 import ThemeToggle from "./ThemeToggle.astro";
 import Hamburger from "@/icons/nav-icons/hamburger.astro";
+import Logo from "@/icons/logo.astro";
 
 interface Props {
 	pageActive: string;
 }
 
 const { pageActive } = Astro.props;
+
+let primaryColor = "oklch(var(--clr-primary))";
+let accentColor = "oklch(var(--clr-accent))";
 ---
 
 <Hamburger />
@@ -15,8 +19,7 @@ const { pageActive } = Astro.props;
 <div class="nav-container">
 	<div class="logo-theme">
 		<a href="/">
-			<span class="visually-hidden">Personal logo of Daniel Rodriguez Criado</span>
-			<Icon name="logo" class="logo__img" area-label="Logo of Daniel Rodriguez's website" />
+			<Logo className="logo__img" gradFrom={primaryColor} gradTo={accentColor} />
 		</a>
 		<ThemeToggle />
 	</div>
@@ -87,7 +90,7 @@ const { pageActive } = Astro.props;
 						align-items: center;
 					}
 
-					.logo__img {
+					:global(.logo__img) {
 						height: 5rem;
 						width: 5rem;
 					}
@@ -136,29 +139,34 @@ const { pageActive } = Astro.props;
 					visibility: visible;
 					display: flex;
 					flex-direction: column;
-					justify-content: center;
+					justify-content: flex-start;
 					align-items: center;
+					padding-block-start: 10rem;
 
 					position: fixed;
 					height: 100vh;
 					inset: 0;
 					background-color: oklch(var(--clr-text) / 0.5);
 					backdrop-filter: blur(8px);
-					color: oklch(var(--clr-light));
+					color: oklch(var(--clr-text-invert));
 
 					#main-nav > ul {
 						flex-direction: column;
 						gap: 2rem;
 						align-items: center;
-						justify-content: center;
+						font-size: var(--fs-800);
+
+						a {
+							line-height: 4.4rem;
+						}
 					}
 
 					.logo-theme {
-						padding-block-end: 3rem;
+						padding-block-end: 9rem;
 
-						.logo__img {
-							width: 10rem;
-							aspect-ratio: 1;
+						:global(.logo__img) {
+							width: 12rem;
+							height: 12rem;
 						}
 					}
 				}

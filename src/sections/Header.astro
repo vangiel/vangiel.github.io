@@ -1,6 +1,12 @@
 ---
+import FillImage from "@/images/home/hero/fill.astro";
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import yoImage from "../images/home/hero/you-y-robot.png";
+
+let primaryColor = "oklch(var(--clr-primary))";
+let stopColor = "#FF6C63";
+let accentColor = "oklch(var(--clr-accent))";
 ---
 
 <header>
@@ -26,37 +32,46 @@ import yoImage from "../images/home/hero/you-y-robot.png";
 				densities={[1.5, 2]}
 				alt="Daniel Rodriguez with a robot"
 			/>
+			<FillImage
+				className="hero__fill"
+				gradFrom={primaryColor}
+				gradStop={stopColor}
+				gradTo={accentColor}
+			/>
 		</div>
 	</section>
+	<div class="continue_arrow">
+		<h4>More about me</h4>
+		<Icon name="home/arrow-down" />
+	</div>
 </header>
 
 <style>
 	header {
 		min-height: 100dvh;
-		padding-block-start: 8rem;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
 		background-image: linear-gradient(
 				to bottom,
 				oklch(var(--clr-background) / 0.9),
 				oklch(var(--clr-background) / 0.3)
 			),
+			radial-gradient(ellipse at top, transparent 30%, oklch(var(--clr-background)) 80%),
 			var(--bg-img-home);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed;
+
+		clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
 	}
 
 	.hero-section {
 		display: flex;
 		align-items: center;
-		margin-inline: auto;
 		gap: 6rem;
-		outline: 1px solid red;
+
+		width: fit-content;
+		margin: auto;
+		padding-block-start: 15rem;
 
 		.hero__text {
 			width: clamp(2rem, 30vw, 50rem);
@@ -68,11 +83,40 @@ import yoImage from "../images/home/hero/you-y-robot.png";
 		}
 
 		.hero__image {
+			position: relative;
 			flex-shrink: 0;
+
 			img {
 				display: block;
-				/* max-width: 20rem; */
+				object-fit: contain;
 			}
+
+			:global(.hero__fill) {
+				position: absolute;
+				bottom: 0;
+				right: 50%;
+				transform: translate(57%, -8.5rem) scale(2.6);
+				z-index: -1;
+			}
+		}
+	}
+	.continue_arrow {
+		position: absolute;
+		bottom: 2rem;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+
+		h4 {
+			font-family: var(--ff-accent);
+			font-size: var(--fs-700);
+			font-weight: var(--fw-bold);
+		}
+
+		[data-icon="home/arrow-down"] {
+			padding-top: 1rem;
+			font-size: 5rem;
+			transform: scaleX(2);
 		}
 	}
 </style>
