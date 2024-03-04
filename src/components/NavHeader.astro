@@ -15,6 +15,7 @@ const { pageActive } = Astro.props;
 <div class="nav-container">
 	<div class="logo-theme">
 		<a href="/">
+			<span class="visually-hidden">Personal logo of Daniel Rodriguez Criado</span>
 			<Icon name="logo" class="logo__img" area-label="Logo of Daniel Rodriguez's website" />
 		</a>
 		<ThemeToggle />
@@ -114,7 +115,7 @@ const { pageActive } = Astro.props;
 				a:hover,
 				a:focus {
 					background: oklch(var(--clr-accent));
-					color: oklch(var(--clr-neutral-800));
+					color: oklch(var(--clr-text-invert));
 				}
 			}
 

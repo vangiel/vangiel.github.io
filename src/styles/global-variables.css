@@ -30,12 +30,13 @@
 	--clr-neutral-600: 49% 0.182 253.72;
 	--clr-neutral-700: 38% 0.123 253.72;
 	--clr-neutral-800: 25% 0.051 253.72;
-	--clr-neutral-900: 12% 0.021 253.72;
+	--clr-neutral-900: 18% 0.021 253.72;
 
 	/* font weights */
 	--fw-regular: 500;
 	--fw-bold: 600;
 	--fw-black: 700;
+	--fw-extra-bold: 900;
 
 	/* font sizes */
 	--fs-300: 1rem;
@@ -43,6 +44,8 @@
 	--fs-500: 1.375rem;
 	--fs-600: 1.75rem;
 	--fs-700: 2.25rem;
+	--fs-800: 2.75rem;
+	--fs-900: 3.25rem;
 
 	/* Global sizes  and breakpoints */
 	--max-main-width: 60ch;

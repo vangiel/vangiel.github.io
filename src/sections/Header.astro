@@ -1,18 +1,32 @@
 ---
-
+import { Image } from "astro:assets";
+import yoImage from "../images/home/hero/you-y-robot.png";
 ---
 
 <header>
 	<section class="hero-section">
 		<div class="hero__text">
-			<h1>Hey I'm Daniel Rodriguez Criado</h1>
+			<h1>Hey I am Daniel!</h1>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto alias cupiditate
 				autem ipsum, eveniet ipsa a! Aperiam culpa sunt unde dignissimos, veritatis delectus error
 				similique nemo velit. Iusto, excepturi?
 			</p>
+			<button> Download CV </button>
+			<button> Contact me </button>
+			<div class="social-media">
+				<a href="https://github.com/danielrodriguez28"> linkin </a>
+			</div>
 		</div>
-		<div class="hero__image"></div>
+		<div class="hero__image">
+			<Image
+				class="img"
+				src={yoImage}
+				width={yoImage.width / 1.5}
+				densities={[1.5, 2]}
+				alt="Daniel Rodriguez with a robot"
+			/>
+		</div>
 	</section>
 </header>
 
@@ -38,7 +52,27 @@
 	}
 
 	.hero-section {
-		height: 20rem;
-		width: 50rem;
+		display: flex;
+		align-items: center;
+		margin-inline: auto;
+		gap: 6rem;
+		outline: 1px solid red;
+
+		.hero__text {
+			width: clamp(2rem, 30vw, 50rem);
+			h1 {
+				font-family: var(--ff-accent);
+				font-size: var(--fs-900);
+				font-weight: var(--fw-bold);
+			}
+		}
+
+		.hero__image {
+			flex-shrink: 0;
+			img {
+				display: block;
+				/* max-width: 20rem; */
+			}
+		}
 	}
 </style>
