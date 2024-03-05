@@ -1,5 +1,5 @@
 ---
-import FillImage from "@/images/home/hero/fill.astro";
+// import FillImage from "@/images/home/hero/fill.astro";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import yoImage from "../images/home/hero/you-y-robot.png";
@@ -32,12 +32,12 @@ let accentColor = "oklch(var(--clr-accent))";
 				densities={[1.5, 2]}
 				alt="Daniel Rodriguez with a robot"
 			/>
-			<FillImage
+			<!-- <FillImage
 				className="hero__fill"
 				gradFrom={primaryColor}
 				gradStop={stopColor}
 				gradTo={accentColor}
-			/>
+			/> -->
 		</div>
 	</section>
 	<div class="continue_arrow">
@@ -48,7 +48,11 @@ let accentColor = "oklch(var(--clr-accent))";
 
 <style>
 	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		min-height: 100dvh;
+
 		background-image: linear-gradient(
 				to bottom,
 				oklch(var(--clr-background) / 0.9),
@@ -71,7 +75,7 @@ let accentColor = "oklch(var(--clr-accent))";
 
 		width: fit-content;
 		margin: auto;
-		padding-block-start: 15rem;
+		padding-block-start: 5rem;
 
 		.hero__text {
 			width: clamp(2rem, 30vw, 50rem);
@@ -88,23 +92,40 @@ let accentColor = "oklch(var(--clr-accent))";
 
 			img {
 				display: block;
+				height: clamp(30rem, 50vh, 90rem);
 				object-fit: contain;
+				box-sizing: content-box;
+				padding: 6rem;
+
+				background: no-repeat url("../images/home/hero/fill.svg");
+				background-origin: padding-box;
+				background-position: center bottom 7.8rem;
+				background-size: clamp(20rem, 50vh, 44rem) auto;
+				background-clip: border-box;
 			}
 
 			:global(.hero__fill) {
 				position: absolute;
-				bottom: 0;
+				bottom: 2px;
 				right: 50%;
-				transform: translate(57%, -8.5rem) scale(2.6);
+				height: fit-content;
+				width: 80em;
+				transform: translateX(57%);
 				z-index: -1;
 			}
 		}
+
+		@media (--bp-mobile) {
+			flex-direction: column;
+			justify-content: center;
+			gap: 2rem;
+			padding-block-start: 2rem;
+			padding-block-end: 5rem;
+		}
 	}
+
 	.continue_arrow {
-		position: absolute;
-		bottom: 2rem;
-		left: 50%;
-		transform: translateX(-50%);
+		margin-top: auto;
 		text-align: center;
 
 		h4 {
