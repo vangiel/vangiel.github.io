@@ -60,24 +60,23 @@ let accentColor = "oklch(var(--clr-accent))";
 			</li>
 		</ul>
 
-		<!-- <linearGradient id="b" x1="0" x2="160" y1="0" y2="0" gradientUnits="userSpaceOnUse">
-			<stop stop-color="#FFB147"></stop>
-			<stop offset="1" stop-color="#B86ADF"></stop>
-		</linearGradient> -->
-
 		<style>
 			.nav-container {
 				display: flex;
 				align-items: center;
 				justify-content: space-around;
 
-				height: 8rem;
+				height: var(--navbar-height);
 				padding-inline: min(1rem, 2vw);
 
 				position: fixed;
 				top: 0;
 				inset: 0;
 				z-index: 10;
+
+				animation: blur linear both;
+				animation-timeline: scroll();
+				animation-range: 0 500px;
 
 				.logo-theme {
 					display: flex;
@@ -94,6 +93,16 @@ let accentColor = "oklch(var(--clr-accent))";
 						height: 5rem;
 						width: 5rem;
 					}
+				}
+			}
+
+			@keyframes blur {
+				to {
+					box-shadow:
+						0px 5px 50px -5px oklch(var(--clr-background) / 0.1),
+						0px 0px 0px 1px oklch(var(--clr-neutral-800) / 0.3);
+					background-color: oklch(var(--clr-background) / 0.6);
+					backdrop-filter: blur(10px);
 				}
 			}
 
